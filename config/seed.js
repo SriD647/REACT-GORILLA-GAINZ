@@ -8,13 +8,13 @@ const Item = require('../models/item');
 
   await Category.deleteMany({});
   const categories = await Category.create([
-    {name: 'Sandwiches', sortOrder: 10},
-    {name: 'Seafood', sortOrder: 20},
-    {name: 'Mexican', sortOrder: 30},
-    {name: 'Italian', sortOrder: 40},
-    {name: 'Sides', sortOrder: 50},
-    {name: 'Desserts', sortOrder: 60},
-    {name: 'Drinks', sortOrder: 70},
+    {name: 'Plates', sortOrder: 10},
+    {name: 'Dumbells', sortOrder: 20},
+    {name: 'Barbells', sortOrder: 30},
+    {name: 'Resistance bands', sortOrder: 40},
+    {name: 'Benches', sortOrder: 50},
+    {name: 'Treadmills', sortOrder: 60},
+    {name: 'Accessories', sortOrder: 70},
   ]);
 
   await Item.deleteMany({});

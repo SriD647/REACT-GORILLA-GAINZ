@@ -1,13 +1,14 @@
 :root {
-    --white: #FFFFFF;
-    --tan-1: #FBF9F6;
-    --tan-2: #E7E2DD;
-    --tan-3: #E2D9D1;
-    --tan-4: #D3C1AE;
-    --orange: #F67F00;
-    --text-light: #968c84;
-    --text-dark: #615954;
-  }
+  --white: #443b3b;
+  --tan-1: #716f6d;
+  --tan-2: #c5c0bb;
+  --tan-3: #cfc7c0;
+  --tan-4: #D3C1AE;
+  --orange: #0f0903;
+  --text-light: #968c84;
+  --text-dark: #615954;
+}
+
 
   *, *:before, *:after {
     box-sizing: border-box;
@@ -32,6 +33,7 @@
 
   #root {
     height: 100%;
+    background-color: black;
   }
 
   .align-ctr {
@@ -77,12 +79,20 @@
     font-size: 2vmin;
   }
 
+
   .form-container {
     padding: 3vmin;
     background-color: var(--tan-1);
     border: .1vmin solid var(--tan-3);
     border-radius: 1vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 33vh; 
   }
+  
+   
 
   p.error-message {
     color: var(--orange);
