@@ -1647,23 +1647,23 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.M9T02SfjaYYh3E_2v8A_ {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Adjust as needed */
-}
-
-.s93tLjssTJYh1KmguHSn {
+___CSS_LOADER_EXPORT___.push([module.id, `.s93tLjssTJYh1KmguHSn {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem; /* Add spacing between the forms */
-}`, "",{"version":3,"sources":["webpack://./src/pages/AuthPage/AuthPage.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA,EAAA,qBAAA;AACF;;AAEA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,SAAA,EAAA,kCAAA;AACF","sourcesContent":[".centeredContainer {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh; /* Adjust as needed */\n}\n\n.formsContainer {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 1rem; /* Add spacing between the forms */\n}"],"sourceRoot":""}]);
+}
+
+.RygkJgZmBHTETlLP3C3i {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh;
+}`, "",{"version":3,"sources":["webpack://./src/pages/AuthPage/AuthPage.module.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,SAAA,EAAA,kCAAA;AAAF;;AAGA;EACE,aAAA;EACA,uBAAA,EAAA,wBAAA;EACA,mBAAA,EAAA,sBAAA;EACA,aAAA;AAAF","sourcesContent":["\n.formsContainer {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 1rem; /* Add spacing between the forms */\n}\n\n.AuthPage {\n  display: flex;\n  justify-content: center; /* Center horizontally */\n  align-items: center; /* Center vertically */\n  height: 100vh;\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"centeredContainer": `M9T02SfjaYYh3E_2v8A_`,
-	"formsContainer": `s93tLjssTJYh1KmguHSn`
+	"formsContainer": `s93tLjssTJYh1KmguHSn`,
+	"AuthPage": `RygkJgZmBHTETlLP3C3i`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1780,8 +1780,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `:root {
   --tan-1: #716f6d;
   --tan-2: #c5c0bb;
   --tan-3: #cfc7c0;
-  --tan-4: #D3C1AE;
-  --orange: #0f0903;
+  --tan-4: #94928f;
+  --orange: #5e5d5c;
   --text-light: #968c84;
   --text-dark: #615954;
 }
@@ -1854,14 +1854,14 @@ code {
 
 .MMHxHyV5UppwvI7obxXL {
   padding: 3vmin;
-  background-color: var(--tan-1);
+  background-color: rgb(7, 6, 6);
   border: 0.1vmin solid var(--tan-3);
   border-radius: 1vmin;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 35vh;
+  height: 33vh;
 }
 
 p.fgWR5Asb2guMuboowfoa {
@@ -1893,19 +1893,19 @@ input {
 }
 
 input:focus {
-  border-color: var(--orange);
+  border-color: #968c84;
 }
 
 button, a.vv25IKDRix2smYD5QAfA {
   margin: 1vmin;
   padding: 1vmin;
   color: var(--white);
-  background-color: var(--orange);
+  background-color: #968c84;
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border: 0.1vmin solid var(--tan-2);
+  border: 0.1vmin solid #968c84;
   border-radius: 0.5vmin;
   outline: none;
   cursor: pointer;
@@ -1923,13 +1923,13 @@ button.mmcnNCjhUQqEoaSf8Yur {
 
 button:disabled, form:invalid button[type=submit] {
   cursor: not-allowed;
-  background-color: var(--tan-4);
+  background-color: #968c84;
 }
 
 button[type=submit] {
   grid-column: span 2;
   margin: 1vmin 0 0;
-}`, "",{"version":3,"sources":["webpack://./src/scss/styles.scss"],"names":[],"mappings":"AAAA;EACE,gBAAA;EACA,gBAAA;EACA,gBAAA;EACA,gBAAA;EACA,gBAAA;EACA,iBAAA;EACA,qBAAA;EACA,oBAAA;AACF;;AAGE;EACE,sBAAA;AAAJ;;AAGE;EACE,SAAA;EACA,8JAAA;EAGA,mCAAA;EACA,kCAAA;EACA,8BAAA;EACA,cAAA;EACA,aAAA;AAFJ;;AAKE;EACE,+EAAA;AAFJ;;AAME;EACE,YAAA;EACA,uBAAA;AAHJ;;AAME;EACE,kBAAA;AAHJ;;AAME;EACE,iBAAA;AAHJ;;AAME;EACE,kBAAA;AAHJ;;AAME;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;AAHJ;;AAME;EACE,sBAAA;AAHJ;;AAME;EACE,yBAAA;AAHJ;;AAME;EACE,kBAAA;AAHJ;;AAME;EACE,aAAA;EACA,6BAAA;EACA,mBAAA;EACA,8BAAA;EACA,uBAAA;EACA,kCAAA;EACA,oBAAA;EACA,gBAAA;EACA,kBAAA;EACA,gBAAA;AAHJ;;AAOE;EACE,cAAA;EACA,8BAAA;EACA,kCAAA;EACA,oBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,YAAA;AAJJ;;AASE;EACE,oBAAA;EACA,kBAAA;AANJ;;AASE;EACE,aAAA;EACA,8BAAA;EACA,aAAA;EACA,wBAAA;AANJ;;AASE;EACE,gBAAA;EACA,aAAA;EACA,mBAAA;AANJ;;AASE;EACE,cAAA;EACA,gBAAA;EACA,kCAAA;EACA,sBAAA;EACA,uBAAA;EACA,iCAAA,EAAA,qBAAA;EACA,aAAA;AANJ;;AASE;EACE,2BAAA;AANJ;;AASE;EACE,aAAA;EACA,cAAA;EACA,mBAAA;EACA,+BAAA;EACA,gBAAA;EACA,iBAAA;EACA,qBAAA;EACA,kBAAA;EACA,kCAAA;EACA,sBAAA;EACA,aAAA;EACA,eAAA;AANJ;;AASE;EACE,kBAAA;EACA,wBAAA;AANJ;;AASE;EACE,gBAAA;EACA,wBAAA;AANJ;;AASE;EACE,mBAAA;EACA,8BAAA;AANJ;;AASE;EACE,mBAAA;EACA,iBAAA;AANJ","sourcesContent":[":root {\n  --white: #443b3b;\n  --tan-1: #716f6d;\n  --tan-2: #c5c0bb;\n  --tan-3: #cfc7c0;\n  --tan-4: #D3C1AE;\n  --orange: #0f0903;\n  --text-light: #968c84;\n  --text-dark: #615954;\n}\n\n\n  *, *:before, *:after {\n    box-sizing: border-box;\n  }\n\n  body {\n    margin: 0;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\n    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\n    sans-serif;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    background-color: var(--tan-4);\n    padding: 2vmin;\n    height: 100vh;\n  }\n\n  code {\n    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',\n      monospace;\n  }\n\n  #root {\n    height: 100%;\n    background-color: black;\n  }\n\n  .align-ctr {\n    text-align: center;\n  }\n\n  .align-rt {\n    text-align: right;\n  }\n\n  .smaller {\n    font-size: smaller;\n  }\n\n  .flex-ctr-ctr {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .flex-col {\n    flex-direction: column;\n  }\n\n  .flex-j-end {\n    justify-content: flex-end;\n  }\n\n  .scroll-y {\n    overflow-y: scroll;\n  }\n\n  .section-heading {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n    background-color: var(--tan-1);\n    color: var(--text-dark);\n    border: .1vmin solid var(--tan-3);\n    border-radius: 1vmin;\n    padding: .6vmin;\n    text-align: center;\n    font-size: 2vmin;\n  }\n\n\n  .form-container {\n    padding: 3vmin;\n    background-color: var(--tan-1);\n    border: .1vmin solid var(--tan-3);\n    border-radius: 1vmin;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    height: 35vh; \n  }\n  \n   \n\n  p.error-message {\n    color: var(--orange);\n    text-align: center;\n  }\n\n  form {\n    display: grid;\n    grid-template-columns: 1fr 3fr;\n    gap: 1.25vmin;\n    color: var(--text-light);\n  }\n\n  label {\n    font-size: 2vmin;\n    display: flex;\n    align-items: center;\n  }\n\n  input {\n    padding: 1vmin;\n    font-size: 2vmin;\n    border: .1vmin solid var(--tan-3);\n    border-radius: .5vmin;\n    color: var(--text-dark);\n    background-image: none !important; /* prevent lastpass */\n    outline: none;\n  }\n\n  input:focus {\n    border-color: var(--orange);\n  }\n\n  button, a.button {\n    margin: 1vmin;\n    padding: 1vmin;\n    color: var(--white);\n    background-color: var(--orange);\n    font-size: 2vmin;\n    font-weight: bold;\n    text-decoration: none;\n    text-align: center;\n    border: .1vmin solid var(--tan-2);\n    border-radius: .5vmin;\n    outline: none;\n    cursor: pointer;\n  }\n\n  button.btn-sm {\n    font-size: 1.5vmin;\n    padding: .6vmin .8vmin;\n  }\n\n  button.btn-xs {\n    font-size: 1vmin;\n    padding: .4vmin .5vmin;\n  }\n\n  button:disabled, form:invalid button[type=\"submit\"] {\n    cursor: not-allowed;\n    background-color: var(--tan-4);\n  }\n\n  button[type=\"submit\"] {\n    grid-column: span 2;\n    margin: 1vmin 0 0;\n  }"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/scss/styles.scss"],"names":[],"mappings":"AAAA;EACE,gBAAA;EACA,gBAAA;EACA,gBAAA;EACA,gBAAA;EACA,gBAAA;EACA,iBAAA;EACA,qBAAA;EACA,oBAAA;AACF;;AAGE;EACE,sBAAA;AAAJ;;AAGE;EACE,SAAA;EACA,8JAAA;EAGA,mCAAA;EACA,kCAAA;EACA,8BAAA;EACA,cAAA;EACA,aAAA;AAFJ;;AAKE;EACE,+EAAA;AAFJ;;AAME;EACE,YAAA;EACA,uBAAA;AAHJ;;AAME;EACE,kBAAA;AAHJ;;AAME;EACE,iBAAA;AAHJ;;AAME;EACE,kBAAA;AAHJ;;AAME;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;AAHJ;;AAME;EACE,sBAAA;AAHJ;;AAME;EACE,yBAAA;AAHJ;;AAME;EACE,kBAAA;AAHJ;;AAME;EACE,aAAA;EACA,6BAAA;EACA,mBAAA;EACA,8BAAA;EACA,uBAAA;EACA,kCAAA;EACA,oBAAA;EACA,gBAAA;EACA,kBAAA;EACA,gBAAA;AAHJ;;AAOE;EACE,cAAA;EACA,8BAAA;EACA,kCAAA;EACA,oBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,YAAA;AAJJ;;AASE;EACE,oBAAA;EACA,kBAAA;AANJ;;AASE;EACE,aAAA;EACA,8BAAA;EACA,aAAA;EACA,wBAAA;AANJ;;AASE;EACE,gBAAA;EACA,aAAA;EACA,mBAAA;AANJ;;AASE;EACE,cAAA;EACA,gBAAA;EACA,kCAAA;EACA,sBAAA;EACA,uBAAA;EACA,iCAAA,EAAA,qBAAA;EACA,aAAA;AANJ;;AASE;EACE,qBAAA;AANJ;;AASE;EACE,aAAA;EACA,cAAA;EACA,mBAAA;EACA,yBAAA;EACA,gBAAA;EACA,iBAAA;EACA,qBAAA;EACA,kBAAA;EACA,6BAAA;EACA,sBAAA;EACA,aAAA;EACA,eAAA;AANJ;;AASE;EACE,kBAAA;EACA,wBAAA;AANJ;;AASE;EACE,gBAAA;EACA,wBAAA;AANJ;;AASE;EACE,mBAAA;EACA,yBAAA;AANJ;;AASE;EACE,mBAAA;EACA,iBAAA;AANJ","sourcesContent":[":root {\n  --white: #443b3b;\n  --tan-1: #716f6d;\n  --tan-2: #c5c0bb;\n  --tan-3: #cfc7c0;\n  --tan-4: #94928f;\n  --orange: #5e5d5c;\n  --text-light: #968c84;\n  --text-dark: #615954;\n}\n\n\n  *, *:before, *:after {\n    box-sizing: border-box;\n  }\n\n  body {\n    margin: 0;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\n    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\n    sans-serif;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    background-color: var(--tan-4);\n    padding: 2vmin;\n    height: 100vh;\n  }\n\n  code {\n    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',\n      monospace;\n  }\n\n  #root {\n    height: 100%;\n    background-color: black;\n  }\n\n  .align-ctr {\n    text-align: center;\n  }\n\n  .align-rt {\n    text-align: right;\n  }\n\n  .smaller {\n    font-size: smaller;\n  }\n\n  .flex-ctr-ctr {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .flex-col {\n    flex-direction: column;\n  }\n\n  .flex-j-end {\n    justify-content: flex-end;\n  }\n\n  .scroll-y {\n    overflow-y: scroll;\n  }\n\n  .section-heading {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n    background-color: var(--tan-1);\n    color: var(--text-dark);\n    border: .1vmin solid var(--tan-3);\n    border-radius: 1vmin;\n    padding: .6vmin;\n    text-align: center;\n    font-size: 2vmin;\n  }\n\n\n  .form-container {\n    padding: 3vmin;\n    background-color: rgb(7, 6, 6);\n    border: .1vmin solid var(--tan-3);\n    border-radius: 1vmin;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    height: 33vh; \n  }\n  \n     \n\n  p.error-message {\n    color: var(--orange);\n    text-align: center;\n  }\n\n  form {\n    display: grid;\n    grid-template-columns: 1fr 3fr;\n    gap: 1.25vmin;\n    color: var(--text-light);\n  }\n\n  label {\n    font-size: 2vmin;\n    display: flex;\n    align-items: center;\n  }\n\n  input {\n    padding: 1vmin;\n    font-size: 2vmin;\n    border: .1vmin solid var(--tan-3);\n    border-radius: .5vmin;\n    color: var(--text-dark);\n    background-image: none !important; /* prevent lastpass */\n    outline: none;\n  }\n\n  input:focus {\n    border-color: #968c84;\n  }\n\n  button, a.button {\n    margin: 1vmin;\n    padding: 1vmin;\n    color: var(--white);\n    background-color: #968c84;\n    font-size: 2vmin;\n    font-weight: bold;\n    text-decoration: none;\n    text-align: center;\n    border: .1vmin solid #968c84;\n    border-radius: .5vmin;\n    outline: none;\n    cursor: pointer;\n  }\n\n  button.btn-sm {\n    font-size: 1.5vmin;\n    padding: .6vmin .8vmin;\n  }\n\n  button.btn-xs {\n    font-size: 1vmin;\n    padding: .4vmin .5vmin;\n  }\n\n  button:disabled, form:invalid button[type=\"submit\"] {\n    cursor: not-allowed;\n    background-color: #968c84;\n  }\n\n  button[type=\"submit\"] {\n    grid-column: span 2;\n    margin: 1vmin 0 0;\n  }"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"root": `tjWEEomjEYxLvWlDEOE3`,

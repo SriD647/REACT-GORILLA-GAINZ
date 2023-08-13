@@ -1,13 +1,14 @@
-.centeredContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Adjust as needed */
-}
 
 .formsContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem; /* Add spacing between the forms */
+}
+
+.AuthPage {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh;
 }
