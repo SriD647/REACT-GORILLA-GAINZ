@@ -5,8 +5,8 @@
     align-items: center;
     margin-bottom: 3vmin;
     padding: 2vmin;
-    color: var(--text-light);
-    background-color: var(--white);
+    color: red;
+    background-color: black;
     border: .1vmin solid var(--tan-3);
     border-radius: 1vmin;
     font-size: 4vmin;
@@ -19,21 +19,24 @@
     background-color: var(--tan-1);
     border: .1vmin solid var(--tan-3);
     border-radius: 1vmin;
+    background-color: black;
   }
   
   .MenuListItem .buy {
     display: flex;
     flex-direction: column;
+    color: red;
   }
   
   .MenuListItem .buy span {
     font-size: 1.7vw;
     text-align: center;
-    color: var(--text-light);
+    color: red;
+
   }
   
   .MenuListItem .name {
     font-size: 2vw;
     text-align: center;
-    color: var(--text-light);
+    color: red;
   }

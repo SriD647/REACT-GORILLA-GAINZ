@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const itemSchema = require('./itemSchema');
 
 const lineItemSchema = new Schema({
-  qty: { type: Number, default: 1 },
+  qty: { type: Number, default: 0 },
   item: itemSchema
 }, {
   timestamps: true,

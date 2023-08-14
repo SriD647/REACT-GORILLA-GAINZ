@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import styles from './AuthPage.module.scss';
 import LoginForm from '../../components/LoginForm/LoginForm';

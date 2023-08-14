@@ -5,6 +5,7 @@
     padding: 3vmin;
     font-size: 2vmin;
     color: var(--text-light);
+    background-color: black;
   }
   
   .OrderDetail .sectionHeading {
@@ -16,6 +17,7 @@
     justify-content: flex-start;
     height: calc(100vh - 18vmin);
     width: 100%;
+    background-color: black;
   }
   
   .OrderDetail .total {
