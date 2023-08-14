@@ -3,7 +3,6 @@
     list-style: none;
     padding: 0;
     font-size: 1.7vw;
-    color:red;
     }
     
     .CategoryList li {
@@ -21,6 +20,6 @@
     
     .CategoryList li.active {
     color: var(--text-dark);
-    background-color: black;
+    background-color: var(--tan-1);
     border: .1vmin solid var(--tan-3);
     }

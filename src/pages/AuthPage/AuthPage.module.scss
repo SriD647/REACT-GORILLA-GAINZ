@@ -1,14 +1,15 @@
-
-.formsContainer {
+.AuthPage {
+  height: 100%;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  gap: 1rem; /* Add spacing between the forms */
+  background-color: var(--white);
+  border-radius: 2vmin;
 }
 
-.AuthPage {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 100vh;
+.AuthPage h3 {
+  margin-top: 4vmin;
+  text-align: center;
+  color: var(--text-light);
+  cursor: pointer;
 }
