@@ -47,9 +47,16 @@
   color: var(--text-light);
   background-color: rgba(0, 0, 0, 0.5);
   white-space: pre-wrap;
+  text-decoration: none; /* Remove the underline */
+  
 }
 
 .image {
   max-height: 20vmin;
   max-width: 20vmin;
+}
+
+.link {
+  text-decoration: none; /* Remove the underline */
+  color: rgb(65, 158, 240)
 }

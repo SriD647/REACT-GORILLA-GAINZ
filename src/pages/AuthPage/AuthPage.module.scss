@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem; /* Add spacing between the forms */
+  padding: 0;
 }
 
 .AuthPage {
@@ -12,6 +13,8 @@
   align-items: center; /* Center vertically */
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 0.5vw;
+  padding: 0;
 }
 
 @keyframes floating {
@@ -32,5 +35,6 @@
     color: rgb(227, 31, 31);
     font-size: 1.2vw;
     align-items: center;
-    margin-left: 5vw;
+    margin-left: 6.0vw;
+    margin-bottom: 0.5rem;
 }

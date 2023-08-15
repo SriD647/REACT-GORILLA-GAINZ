@@ -62,18 +62,6 @@ orderSchema.methods.addItemToCart = async function(itemId) {
   return cart.save();
 };
 
-orderSchema.methods.removeItemFromCart = function(itemId) {
-  const cart = this;
-  const itemIndex = cart.lineItems.findIndex(lineItem => lineItem.item._id.equals(itemId));
-
-  if (itemIndex !== -1) {
-    cart.lineItems.splice(itemIndex, 1);
-  }
-
-  return cart.save();
-};
-
-
 // Instance method to set an item's qty in the cart (will add item if does not exist)
 orderSchema.methods.setItemQty = function(itemId, newQty) {
   // this keyword is bound to the cart (order doc)
