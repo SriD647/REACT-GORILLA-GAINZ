@@ -57,7 +57,7 @@ export default function NewOrderPage({ user, setUser }) {
     <main className={styles.NewOrderPage}>
       <aside className={styles.aside}>
         
-      <img className={styles.logo} src="gorilla.jpg" alt="logo" />
+      <img className={styles.logo} src="/img/gorillaNoBackground.png" alt="logo" />
         <CategoryList
           categories={categoriesRef.current}
           cart={setCart}

@@ -11,4 +11,26 @@
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes floating {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.discount {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    animation: floating 2s infinite;
+    color: rgb(227, 31, 31);
+    font-size: 1.2vw;
+    align-items: center;
+    margin-left: 5vw;
 }

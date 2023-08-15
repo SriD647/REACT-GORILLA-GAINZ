@@ -7,7 +7,7 @@
   --orange: #5e5d5c;
   --text-light: #c7c4c2;
   --text-dark: #615954;
-  background-color: rgba(0, 0, 0, 0.5)
+  background-color: rgba(0, 0, 0, 0.3)
 }
 
 *, *:before, *:after {
@@ -21,7 +21,7 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 2vmin;
   height: 100vh;
   background-image: url('gym.jpg');
@@ -35,7 +35,7 @@ code {
 
 #root {
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity value as needed */
+  background-color: rgba(0, 0, 0, 0.3); /* Adjust the opacity value as needed */
 }
 
 /* Rest of your CSS styles... */

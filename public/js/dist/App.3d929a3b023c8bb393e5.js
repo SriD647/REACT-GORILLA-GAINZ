@@ -57,7 +57,7 @@ function LineItem(_ref) {
     className: _LineItem_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].LineItem
   }, /*#__PURE__*/React.createElement("div", {
     className: "flex-ctr-ctr"
-  }, lineItem.item.emoji), /*#__PURE__*/React.createElement("div", {
+  }, lineItem.item.image), /*#__PURE__*/React.createElement("div", {
     className: "flex-ctr-ctr flex-col"
   }, /*#__PURE__*/React.createElement("span", {
     className: "align-ctr"
@@ -174,16 +174,16 @@ function LoginForm(_ref) {
 /* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 // Logo.js
 
+// import gorilla from './gorilla.jpg'
+
 function Logo() {
   return /*#__PURE__*/React.createElement("div", {
     className: _Logo_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].Logo
   }, /*#__PURE__*/React.createElement("img", {
     className: _Logo_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].logo,
-    src: "./gorilla.jpg",
+    src: "/img/gorillaNoBackground.png",
     alt: "logo"
-  }), /*#__PURE__*/React.createElement("h2", {
-    className: _Logo_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].title
-  }, "Welcome to Gorilla Gainz "));
+  }));
 }
 
 /***/ }),
@@ -238,9 +238,10 @@ function MenuListItem(_ref) {
   } = _ref;
   return /*#__PURE__*/React.createElement("div", {
     className: _MenuListItem_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].MenuListItem
-  }, /*#__PURE__*/React.createElement("div", {
-    className: _MenuListItem_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].emoji + ' ' + 'flex-ctr-ctr'
-  }, menuItem.emoji), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("img", {
+    className: _MenuListItem_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].image,
+    src: menuItem.image
+  }), /*#__PURE__*/React.createElement("div", {
     className: _MenuListItem_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].name
   }, menuItem.name), /*#__PURE__*/React.createElement("div", {
     className: _MenuListItem_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].manufacturer
@@ -636,7 +637,9 @@ function AuthPage(_ref) {
     setUser: setUser
   }), /*#__PURE__*/React.createElement(_components_SignUpForm_SignUpForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
     setUser: setUser
-  }))));
+  })), /*#__PURE__*/React.createElement("h2", {
+    className: _AuthPage_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].discount
+  }, " ***30% discount for General Assembly students!!!")));
 }
 
 /***/ }),
@@ -755,7 +758,7 @@ function NewOrderPage(_ref) {
     className: _NewOrderPage_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].aside
   }, /*#__PURE__*/React.createElement("img", {
     className: _NewOrderPage_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].logo,
-    src: "gorilla.jpg",
+    src: "/img/gorillaNoBackground.png",
     alt: "logo"
   }), /*#__PURE__*/React.createElement(_components_CategoryList_CategoryList__WEBPACK_IMPORTED_MODULE_4__["default"], {
     categories: categoriesRef.current,
@@ -845,7 +848,11 @@ function OrderHistoryPage(_ref) {
     className: _OrderHistoryPage_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].OrderHistoryPage
   }, /*#__PURE__*/React.createElement("aside", {
     className: _OrderHistoryPage_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].aside
-  }, /*#__PURE__*/React.createElement(_components_Logo_Logo__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
+  }, /*#__PURE__*/React.createElement("img", {
+    className: _OrderHistoryPage_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].logo,
+    src: "/img/gorillaNoBackground.png",
+    alt: "logo"
+  }), /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
     to: "/orders/new",
     className: "button btn-sm"
   }, "NEW ORDER"), /*#__PURE__*/React.createElement(_components_UserLogOut_UserLogOut__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -1222,13 +1229,15 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Logo.module.scss */
   margin-left: 250px;
 }
 
-.ZXOnLWKoFcklM34sme6w {
-  white-space: nowrap; /* Add this line to prevent line breaks */
-}`, "",{"version":3,"sources":["webpack://./src/components/Logo/Logo.module.scss"],"names":[],"mappings":"AAAA,qBAAA;AACA;EACE,cAAA;EACA,aAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,aAAA;EACA,kBAAA;AACF;;AAEA;EACE,mBAAA,EAAA,yCAAA;AACF","sourcesContent":["/* Logo.module.scss */\n.Logo {\n  height: 12vmin;\n  width: 12vmin;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  font-size: 2.7vmin;\n  color: silver;\n  margin-left: 250px;\n}\n\n.title {\n  white-space: nowrap; /* Add this line to prevent line breaks */\n}\n"],"sourceRoot":""}]);
+.flNGvSJKK4InMbr35RYA {
+  height: 80vmin;
+  width: 80vmin;
+  margin-bottom: 5vmin;
+}`, "",{"version":3,"sources":["webpack://./src/components/Logo/Logo.module.scss"],"names":[],"mappings":"AAAA,qBAAA;AACA;EACE,cAAA;EACA,aAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,aAAA;EACA,kBAAA;AACF;;AAEA;EACE,cAAA;EACA,aAAA;EACA,oBAAA;AACF","sourcesContent":["/* Logo.module.scss */\n.Logo {\n  height: 12vmin;\n  width: 12vmin;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  font-size: 2.7vmin;\n  color: silver;\n  margin-left: 250px;\n}\n\n.logo {\n  height: 80vmin;\n  width: 80vmin;\n  margin-bottom: 5vmin;\n}\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"Logo": `EDeinQzfS2N2rVW_Z1GP`,
-	"title": `ZXOnLWKoFcklM34sme6w`
+	"logo": `flNGvSJKK4InMbr35RYA`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1337,14 +1346,20 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.X4tFBfG4MKknHvd01CKE {
   color: var(--text-light);
   background-color: rgba(0, 0, 0, 0.5);
   white-space: pre-wrap;
-}`, "",{"version":3,"sources":["webpack://./src/components/MenuListItem/MenuListItem.module.scss"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,oBAAA;EACA,cAAA;EACA,wBAAA;EACA,oCAAA;EACA,kCAAA;EACA,oBAAA;EACA,gBAAA;AACF;;AAEA;EACE,WAAA;EACA,UAAA;EACA,cAAA;EACA,8BAAA;EACA,kCAAA;EACA,oBAAA;AACF;;AAEA;EACE,aAAA;EACA,sBAAA;EACA,oCAAA;AACF;;AAEA;EACE,gBAAA;EACA,kBAAA;EACA,wBAAA;EACA,oCAAA;AACF;;AAEA;EACE,gBAAA;EACA,kBAAA;EACA,wBAAA;EACA,oCAAA;AACF;;AAEA;EACE,cAAA;EACA,kBAAA;EACA,wBAAA;EACA,oCAAA;EACA,qBAAA;AACF","sourcesContent":[".MenuListItem {\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 3vmin;\n  padding: 2vmin;\n  color: var(--text-light);\n  background-color: rgba(0, 0, 0, 0.3);\n  border: .1vmin solid var(--tan-3);\n  border-radius: 1vmin;\n  font-size: 2vmin;\n}\n\n.MenuListItem .emoji {\n  height: 8vw;\n  width: 8vw;\n  font-size: 4vw;\n  background-color: var(--tan-1);\n  border: .1vmin solid var(--tan-3);\n  border-radius: 1vmin;\n}\n\n.MenuListItem .buy {\n  display: flex;\n  flex-direction: column;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.MenuListItem .buy span {\n  font-size: 1.7vw;\n  text-align: center;\n  color: var(--text-light);\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.MenuListItem .name {\n  font-size: 1.5vw;\n  text-align: center;\n  color: var(--text-light);\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.MenuListItem .manufacturer {\n  font-size: 1.0vw;\n  text-align: center;\n  color: var(--text-light);\n  background-color: rgba(0, 0, 0, 0.5);\n  white-space: pre-wrap;\n}\n"],"sourceRoot":""}]);
+}
+
+.dTwdG1Vxh_kNAcuyMLbz {
+  max-height: 20vmin;
+  max-width: 20vmin;
+}`, "",{"version":3,"sources":["webpack://./src/components/MenuListItem/MenuListItem.module.scss"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,oBAAA;EACA,cAAA;EACA,wBAAA;EACA,oCAAA;EACA,kCAAA;EACA,oBAAA;EACA,gBAAA;AACF;;AAEA;EACE,WAAA;EACA,UAAA;EACA,cAAA;EACA,8BAAA;EACA,kCAAA;EACA,oBAAA;AACF;;AAEA;EACE,aAAA;EACA,sBAAA;EACA,oCAAA;AACF;;AAEA;EACE,gBAAA;EACA,kBAAA;EACA,wBAAA;EACA,oCAAA;AACF;;AAEA;EACE,gBAAA;EACA,kBAAA;EACA,wBAAA;EACA,oCAAA;AACF;;AAEA;EACE,cAAA;EACA,kBAAA;EACA,wBAAA;EACA,oCAAA;EACA,qBAAA;AACF;;AAEA;EACE,kBAAA;EACA,iBAAA;AACF","sourcesContent":[".MenuListItem {\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 3vmin;\n  padding: 2vmin;\n  color: var(--text-light);\n  background-color: rgba(0, 0, 0, 0.3);\n  border: .1vmin solid var(--tan-3);\n  border-radius: 1vmin;\n  font-size: 2vmin;\n}\n\n.MenuListItem .emoji {\n  height: 8vw;\n  width: 8vw;\n  font-size: 4vw;\n  background-color: var(--tan-1);\n  border: .1vmin solid var(--tan-3);\n  border-radius: 1vmin;\n}\n\n.MenuListItem .buy {\n  display: flex;\n  flex-direction: column;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.MenuListItem .buy span {\n  font-size: 1.7vw;\n  text-align: center;\n  color: var(--text-light);\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.MenuListItem .name {\n  font-size: 1.5vw;\n  text-align: center;\n  color: var(--text-light);\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.MenuListItem .manufacturer {\n  font-size: 1.0vw;\n  text-align: center;\n  color: var(--text-light);\n  background-color: rgba(0, 0, 0, 0.5);\n  white-space: pre-wrap;\n}\n\n.image {\n  max-height: 20vmin;\n  max-width: 20vmin;\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"MenuListItem": `X4tFBfG4MKknHvd01CKE`,
 	"emoji": `GqkE12RHPdZZg1360W4p`,
 	"buy": `fO9kiPygtr0vmzsXoUxA`,
 	"name": `VR1OCl60qOXrRx1IzVEa`,
-	"manufacturer": `go4hU_ZUtQHR83WlXCTL`
+	"manufacturer": `go4hU_ZUtQHR83WlXCTL`,
+	"image": `dTwdG1Vxh_kNAcuyMLbz`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1637,11 +1652,34 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.s93tLjssTJYh1KmguHSn {
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   height: 100vh;
-}`, "",{"version":3,"sources":["webpack://./src/pages/AuthPage/AuthPage.module.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,SAAA,EAAA,kCAAA;AAAF;;AAGA;EACE,aAAA;EACA,uBAAA,EAAA,wBAAA;EACA,mBAAA,EAAA,sBAAA;EACA,aAAA;AAAF","sourcesContent":["\n.formsContainer {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 1rem; /* Add spacing between the forms */\n}\n\n.AuthPage {\n  display: flex;\n  justify-content: center; /* Center horizontally */\n  align-items: center; /* Center vertically */\n  height: 100vh;\n}"],"sourceRoot":""}]);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes oOzmoXAkA67heOz7Q2qA {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.sBbzYtpc0yY5sLMk7VAG {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  animation: oOzmoXAkA67heOz7Q2qA 2s infinite;
+  color: rgb(227, 31, 31);
+  font-size: 1.2vw;
+  align-items: center;
+  margin-left: 5vw;
+}`, "",{"version":3,"sources":["webpack://./src/pages/AuthPage/AuthPage.module.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,SAAA,EAAA,kCAAA;AAAF;;AAGA;EACE,aAAA;EACA,uBAAA,EAAA,wBAAA;EACA,mBAAA,EAAA,sBAAA;EACA,aAAA;EACA,oCAAA;AAAF;;AAGA;EACE;IACE,wBAAA;EAAF;EAEA;IACE,4BAAA;EAAF;EAEA;IACE,wBAAA;EAAF;AACF;AAGA;EACI,6EAAA;EACA,2CAAA;EACA,uBAAA;EACA,gBAAA;EACA,mBAAA;EACA,gBAAA;AADJ","sourcesContent":["\n.formsContainer {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 1rem; /* Add spacing between the forms */\n}\n\n.AuthPage {\n  display: flex;\n  justify-content: center; /* Center horizontally */\n  align-items: center; /* Center vertically */\n  height: 100vh;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n@keyframes floating {\n  0% {\n    transform: translateX(0);\n  }\n  50% {\n    transform: translateX(-20px);\n  }\n  100% {\n    transform: translateX(0);\n  }\n}\n\n.discount {\n    font-family: \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\", sans-serif;\n    animation: floating 2s infinite;\n    color: rgb(227, 31, 31);\n    font-size: 1.2vw;\n    align-items: center;\n    margin-left: 5vw;\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"formsContainer": `s93tLjssTJYh1KmguHSn`,
-	"AuthPage": `RygkJgZmBHTETlLP3C3i`
+	"AuthPage": `RygkJgZmBHTETlLP3C3i`,
+	"discount": `sBbzYtpc0yY5sLMk7VAG`,
+	"floating": `oOzmoXAkA67heOz7Q2qA`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1676,10 +1714,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.RZqTJBeYN7RXwcHgPFys {
 }
 
 .F5MJqrls9kja6MOngCQM {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 70%;
+  max-height: 70%;
   height: auto;
-  size: 25px;
 }
 
 .RZqTJBeYN7RXwcHgPFys aside {
@@ -1689,7 +1726,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.RZqTJBeYN7RXwcHgPFys {
   align-items: center;
   margin: 3vmin 2vmin;
   background-color: rgba(0, 0, 0, 0.5);
-}`, "",{"version":3,"sources":["webpack://./src/pages/NewOrderPage/NewOrderPage.module.scss"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,aAAA;EACA,sCAAA;EACA,uBAAA;EACA,oCAAA;EACA,oBAAA;AACF;;AAEA;EACE,eAAA;EACA,gBAAA;EACA,YAAA;EACA,UAAA;AACF;;AAEA;EACE,aAAA;EACA,sBAAA;EACA,8BAAA;EACA,mBAAA;EACA,mBAAA;EACA,oCAAA;AACF","sourcesContent":[".NewOrderPage {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1.6fr 3.5fr 3fr;\n  grid-template-rows: 1fr;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 2vmin;\n}\n\n.logo {\n  max-width: 100%;\n  max-height: 100%;\n  height: auto;\n  size: 25px;\n}\n\n.NewOrderPage aside {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  margin: 3vmin 2vmin;\n  background-color: rgba(0, 0, 0, 0.5);\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/pages/NewOrderPage/NewOrderPage.module.scss"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,aAAA;EACA,sCAAA;EACA,uBAAA;EACA,oCAAA;EACA,oBAAA;AACF;;AAEA;EACE,cAAA;EACA,eAAA;EACA,YAAA;AACF;;AAEA;EACE,aAAA;EACA,sBAAA;EACA,8BAAA;EACA,mBAAA;EACA,mBAAA;EACA,oCAAA;AACF","sourcesContent":[".NewOrderPage {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1.6fr 3.5fr 3fr;\n  grid-template-rows: 1fr;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 2vmin;\n}\n\n.logo {\n  max-width: 70%;\n  max-height: 70%;\n  height: auto;\n}\n\n.NewOrderPage aside {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  margin: 3vmin 2vmin;\n  background-color: rgba(0, 0, 0, 0.5);\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"NewOrderPage": `RZqTJBeYN7RXwcHgPFys`,
@@ -1734,11 +1771,18 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.U7F51i6q23MB43wS4GeC {
   align-items: center;
   margin: 3vmin 2vmin;
   background-color: rgba(0, 0, 0, 0.5);
-}`, "",{"version":3,"sources":["webpack://./src/pages/OrderHistoryPage/OrderHistoryPage.module.scss"],"names":[],"mappings":"AACA;EACE,YAAA;EACA,aAAA;EACA,sCAAA;EACA,uBAAA;EACA,oCAAA;EACA,oBAAA;AAAF;;AAGA;EACE,aAAA;EACA,sBAAA;EACA,8BAAA;EACA,mBAAA;EACA,mBAAA;EACA,oCAAA;AAAF","sourcesContent":["///css\n.OrderHistoryPage {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1.6fr 3.5fr 3fr;\n  grid-template-rows: 1fr;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 2vmin;\n}\n\n.OrderHistoryPage .aside {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  margin: 3vmin 2vmin;\n  background-color: rgba(0, 0, 0, 0.5);\n}"],"sourceRoot":""}]);
+}
+
+.bdJgIqaIXsYnwqx4qGnF {
+  max-width: 70%;
+  max-height: 70%;
+  height: auto;
+}`, "",{"version":3,"sources":["webpack://./src/pages/OrderHistoryPage/OrderHistoryPage.module.scss"],"names":[],"mappings":"AACA;EACE,YAAA;EACA,aAAA;EACA,sCAAA;EACA,uBAAA;EACA,oCAAA;EACA,oBAAA;AAAF;;AAGA;EACE,aAAA;EACA,sBAAA;EACA,8BAAA;EACA,mBAAA;EACA,mBAAA;EACA,oCAAA;AAAF;;AAGA;EACI,cAAA;EACA,eAAA;EACA,YAAA;AAAJ","sourcesContent":["///css\n.OrderHistoryPage {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1.6fr 3.5fr 3fr;\n  grid-template-rows: 1fr;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 2vmin;\n}\n\n.OrderHistoryPage .aside {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  margin: 3vmin 2vmin;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.logo {\n    max-width: 70%;\n    max-height: 70%;\n    height: auto;\n  }\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"OrderHistoryPage": `U7F51i6q23MB43wS4GeC`,
-	"aside": `Gl976TgPIRmY9_yeWoZA`
+	"aside": `Gl976TgPIRmY9_yeWoZA`,
+	"logo": `bdJgIqaIXsYnwqx4qGnF`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1777,7 +1821,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `:root {
   --orange: #5e5d5c;
   --text-light: #c7c4c2;
   --text-dark: #615954;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 *, *:before, *:after {
@@ -1789,7 +1833,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 2vmin;
   height: 100vh;
   background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
@@ -1803,7 +1847,7 @@ code {
 
 #tjWEEomjEYxLvWlDEOE3 {
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity value as needed */
+  background-color: rgba(0, 0, 0, 0.3); /* Adjust the opacity value as needed */
 }
 
 /* Rest of your CSS styles... */
@@ -1927,7 +1971,7 @@ button:disabled, form:invalid button[type=submit] {
 button[type=submit] {
   grid-column: span 2;
   margin: 1vmin 0 0;
-}`, "",{"version":3,"sources":["webpack://./src/scss/styles.scss"],"names":[],"mappings":"AAAA;EACE,gBAAA;EACA,gBAAA;EACA,gBAAA;EACA,gBAAA;EACA,gBAAA;EACA,iBAAA;EACA,qBAAA;EACA,oBAAA;EACA,oCAAA;AACF;;AAEA;EACE,sBAAA;AACF;;AAEA;EACE,SAAA;EACA,8JAAA;EAGA,mCAAA;EACA,kCAAA;EACA,oCAAA;EACA,cAAA;EACA,aAAA;EACA,yDAAA;EACA,sBAAA;EACA,2BAAA;AADF;;AAIA;EACE,+EAAA;AADF;;AAIA;EACE,YAAA;EACA,oCAAA,EAAA,uCAAA;AADF;;AAIA,+BAAA;AAGE;EACE,kBAAA;AAHJ;;AAME;EACE,iBAAA;AAHJ;;AAME;EACE,kBAAA;AAHJ;;AAME;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;AAHJ;;AAME;EACE,sBAAA;AAHJ;;AAME;EACE,yBAAA;AAHJ;;AAME;EACE,kBAAA;AAHJ;;AAME;EACE,aAAA;EACA,6BAAA;EACA,mBAAA;EACA,8BAAA;EACA,uBAAA;EACA,kCAAA;EACA,oBAAA;EACA,gBAAA;EACA,kBAAA;EACA,gBAAA;AAHJ;;AAOE;EACE,cAAA;EACA,8BAAA;EACA,kCAAA;EACA,oBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,YAAA;AAJJ;;AASE;EACE,oBAAA;EACA,kBAAA;AANJ;;AASE;EACE,aAAA;EACA,8BAAA;EACA,aAAA;EACA,wBAAA;AANJ;;AASE;EACE,gBAAA;EACA,aAAA;EACA,mBAAA;AANJ;;AASE;EACE,cAAA;EACA,gBAAA;EACA,kCAAA;EACA,sBAAA;EACA,uBAAA;EACA,iCAAA,EAAA,qBAAA;EACA,aAAA;AANJ;;AASE;EACE,qBAAA;AANJ;;AASE;EACE,aAAA;EACA,cAAA;EACA,mBAAA;EACA,yBAAA;EACA,gBAAA;EACA,iBAAA;EACA,qBAAA;EACA,kBAAA;EACA,6BAAA;EACA,sBAAA;EACA,aAAA;EACA,eAAA;AANJ;;AASE;EACE,kBAAA;EACA,wBAAA;AANJ;;AASE;EACE,gBAAA;EACA,wBAAA;AANJ;;AASE;EACE,mBAAA;EACA,yBAAA;AANJ;;AASE;EACE,mBAAA;EACA,iBAAA;AANJ","sourcesContent":[":root {\n  --white: #443b3b;\n  --tan-1: #716f6d;\n  --tan-2: #c5c0bb;\n  --tan-3: #cfc7c0;\n  --tan-4: #94928f;\n  --orange: #5e5d5c;\n  --text-light: #c7c4c2;\n  --text-dark: #615954;\n  background-color: rgba(0, 0, 0, 0.5)\n}\n\n*, *:before, *:after {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\n  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\n  sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  background-color: rgba(0, 0, 0, 0.5);\n  padding: 2vmin;\n  height: 100vh;\n  background-image: url('gym.jpg');\n  background-size: cover;\n  background-position: center;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;\n}\n\n#root {\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity value as needed */\n}\n\n/* Rest of your CSS styles... */\n\n\n  .align-ctr {\n    text-align: center;\n  }\n\n  .align-rt {\n    text-align: right;\n  }\n\n  .smaller {\n    font-size: smaller;\n  }\n\n  .flex-ctr-ctr {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .flex-col {\n    flex-direction: column;\n  }\n\n  .flex-j-end {\n    justify-content: flex-end;\n  }\n\n  .scroll-y {\n    overflow-y: scroll;\n  }\n\n  .section-heading {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n    background-color: var(--tan-1);\n    color: var(--text-dark);\n    border: .1vmin solid var(--tan-3);\n    border-radius: 1vmin;\n    padding: .6vmin;\n    text-align: center;\n    font-size: 2vmin;\n  }\n\n\n  .form-container {\n    padding: 3vmin;\n    background-color: rgb(7, 6, 6);\n    border: .1vmin solid var(--tan-3);\n    border-radius: 1vmin;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    height: 33vh; \n  }\n  \n     \n\n  p.error-message {\n    color: var(--orange);\n    text-align: center;\n  }\n\n  form {\n    display: grid;\n    grid-template-columns: 1fr 3fr;\n    gap: 1.25vmin;\n    color: var(--text-light);\n  }\n\n  label {\n    font-size: 2vmin;\n    display: flex;\n    align-items: center;\n  }\n\n  input {\n    padding: 1vmin;\n    font-size: 2vmin;\n    border: .1vmin solid var(--tan-3);\n    border-radius: .5vmin;\n    color: var(--text-dark);\n    background-image: none !important; /* prevent lastpass */\n    outline: none;\n  }\n\n  input:focus {\n    border-color: #968c84;\n  }\n\n  button, a.button {\n    margin: 1vmin;\n    padding: 1vmin;\n    color: var(--white);\n    background-color: #968c84;\n    font-size: 2vmin;\n    font-weight: bold;\n    text-decoration: none;\n    text-align: center;\n    border: .1vmin solid #968c84;\n    border-radius: .5vmin;\n    outline: none;\n    cursor: pointer;\n  }\n\n  button.btn-sm {\n    font-size: 1.5vmin;\n    padding: .6vmin .8vmin;\n  }\n\n  button.btn-xs {\n    font-size: 1vmin;\n    padding: .4vmin .5vmin;\n  }\n\n  button:disabled, form:invalid button[type=\"submit\"] {\n    cursor: not-allowed;\n    background-color: #968c84;\n  }\n\n  button[type=\"submit\"] {\n    grid-column: span 2;\n    margin: 1vmin 0 0;\n  }"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/scss/styles.scss"],"names":[],"mappings":"AAAA;EACE,gBAAA;EACA,gBAAA;EACA,gBAAA;EACA,gBAAA;EACA,gBAAA;EACA,iBAAA;EACA,qBAAA;EACA,oBAAA;EACA,oCAAA;AACF;;AAEA;EACE,sBAAA;AACF;;AAEA;EACE,SAAA;EACA,8JAAA;EAGA,mCAAA;EACA,kCAAA;EACA,oCAAA;EACA,cAAA;EACA,aAAA;EACA,yDAAA;EACA,sBAAA;EACA,2BAAA;AADF;;AAIA;EACE,+EAAA;AADF;;AAIA;EACE,YAAA;EACA,oCAAA,EAAA,uCAAA;AADF;;AAIA,+BAAA;AAGE;EACE,kBAAA;AAHJ;;AAME;EACE,iBAAA;AAHJ;;AAME;EACE,kBAAA;AAHJ;;AAME;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;AAHJ;;AAME;EACE,sBAAA;AAHJ;;AAME;EACE,yBAAA;AAHJ;;AAME;EACE,kBAAA;AAHJ;;AAME;EACE,aAAA;EACA,6BAAA;EACA,mBAAA;EACA,8BAAA;EACA,uBAAA;EACA,kCAAA;EACA,oBAAA;EACA,gBAAA;EACA,kBAAA;EACA,gBAAA;AAHJ;;AAOE;EACE,cAAA;EACA,8BAAA;EACA,kCAAA;EACA,oBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,YAAA;AAJJ;;AASE;EACE,oBAAA;EACA,kBAAA;AANJ;;AASE;EACE,aAAA;EACA,8BAAA;EACA,aAAA;EACA,wBAAA;AANJ;;AASE;EACE,gBAAA;EACA,aAAA;EACA,mBAAA;AANJ;;AASE;EACE,cAAA;EACA,gBAAA;EACA,kCAAA;EACA,sBAAA;EACA,uBAAA;EACA,iCAAA,EAAA,qBAAA;EACA,aAAA;AANJ;;AASE;EACE,qBAAA;AANJ;;AASE;EACE,aAAA;EACA,cAAA;EACA,mBAAA;EACA,yBAAA;EACA,gBAAA;EACA,iBAAA;EACA,qBAAA;EACA,kBAAA;EACA,6BAAA;EACA,sBAAA;EACA,aAAA;EACA,eAAA;AANJ;;AASE;EACE,kBAAA;EACA,wBAAA;AANJ;;AASE;EACE,gBAAA;EACA,wBAAA;AANJ;;AASE;EACE,mBAAA;EACA,yBAAA;AANJ;;AASE;EACE,mBAAA;EACA,iBAAA;AANJ","sourcesContent":[":root {\n  --white: #443b3b;\n  --tan-1: #716f6d;\n  --tan-2: #c5c0bb;\n  --tan-3: #cfc7c0;\n  --tan-4: #94928f;\n  --orange: #5e5d5c;\n  --text-light: #c7c4c2;\n  --text-dark: #615954;\n  background-color: rgba(0, 0, 0, 0.3)\n}\n\n*, *:before, *:after {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\n  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\n  sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  background-color: rgba(0, 0, 0, 0.3);\n  padding: 2vmin;\n  height: 100vh;\n  background-image: url('gym.jpg');\n  background-size: cover;\n  background-position: center;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;\n}\n\n#root {\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.3); /* Adjust the opacity value as needed */\n}\n\n/* Rest of your CSS styles... */\n\n\n  .align-ctr {\n    text-align: center;\n  }\n\n  .align-rt {\n    text-align: right;\n  }\n\n  .smaller {\n    font-size: smaller;\n  }\n\n  .flex-ctr-ctr {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .flex-col {\n    flex-direction: column;\n  }\n\n  .flex-j-end {\n    justify-content: flex-end;\n  }\n\n  .scroll-y {\n    overflow-y: scroll;\n  }\n\n  .section-heading {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n    background-color: var(--tan-1);\n    color: var(--text-dark);\n    border: .1vmin solid var(--tan-3);\n    border-radius: 1vmin;\n    padding: .6vmin;\n    text-align: center;\n    font-size: 2vmin;\n  }\n\n\n  .form-container {\n    padding: 3vmin;\n    background-color: rgb(7, 6, 6);\n    border: .1vmin solid var(--tan-3);\n    border-radius: 1vmin;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    height: 33vh; \n  }\n  \n     \n\n  p.error-message {\n    color: var(--orange);\n    text-align: center;\n  }\n\n  form {\n    display: grid;\n    grid-template-columns: 1fr 3fr;\n    gap: 1.25vmin;\n    color: var(--text-light);\n  }\n\n  label {\n    font-size: 2vmin;\n    display: flex;\n    align-items: center;\n  }\n\n  input {\n    padding: 1vmin;\n    font-size: 2vmin;\n    border: .1vmin solid var(--tan-3);\n    border-radius: .5vmin;\n    color: var(--text-dark);\n    background-image: none !important; /* prevent lastpass */\n    outline: none;\n  }\n\n  input:focus {\n    border-color: #968c84;\n  }\n\n  button, a.button {\n    margin: 1vmin;\n    padding: 1vmin;\n    color: var(--white);\n    background-color: #968c84;\n    font-size: 2vmin;\n    font-weight: bold;\n    text-decoration: none;\n    text-align: center;\n    border: .1vmin solid #968c84;\n    border-radius: .5vmin;\n    outline: none;\n    cursor: pointer;\n  }\n\n  button.btn-sm {\n    font-size: 1.5vmin;\n    padding: .6vmin .8vmin;\n  }\n\n  button.btn-xs {\n    font-size: 1vmin;\n    padding: .4vmin .5vmin;\n  }\n\n  button:disabled, form:invalid button[type=\"submit\"] {\n    cursor: not-allowed;\n    background-color: #968c84;\n  }\n\n  button[type=\"submit\"] {\n    grid-column: span 2;\n    margin: 1vmin 0 0;\n  }"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"root": `tjWEEomjEYxLvWlDEOE3`,
@@ -2905,4 +2949,4 @@ module.exports = __webpack_require__.p + "2035173eee05297502f4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.4a7f424266e48c8d28c13122a5976a95.js.map
+//# sourceMappingURL=App.635a3e1559aa60ed7214e031fcb2f3a1.js.map

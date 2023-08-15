@@ -19,6 +19,7 @@ module.exports = env => {
 		devtool:"source-map",
 		module: {
 			rules: [
+				
 				{
 					test: /\.m?js$/,
 					enforce: 'pre',

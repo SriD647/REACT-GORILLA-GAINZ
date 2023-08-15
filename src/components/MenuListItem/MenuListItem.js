@@ -3,7 +3,8 @@ import styles from './MenuListItem.module.scss';
 export default function MenuListItem({ menuItem, handleAddToOrder }) {
   return (
     <div className={styles.MenuListItem}>
-      <div className={styles.emoji + ' ' + 'flex-ctr-ctr'}>{menuItem.emoji}</div>
+      <img className={styles.image} src={menuItem.image} ></img>
+      {/* <div className={styles.emoji + ' ' + 'flex-ctr-ctr'}>{menuItem.emoji}</div> */}
       <div className={styles.name}>{menuItem.name}</div>
       <div className={styles.manufacturer}>Manufacturer: {menuItem.manufacturer}</div>
       <div className={styles.buy}>
