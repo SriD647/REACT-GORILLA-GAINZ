@@ -5,10 +5,12 @@
   padding: 3vmin;
   font-size: 2vmin;
   color: var(--text-light);
+  background-color: rgba(0, 0, 0, 0.3)
 }
 
 .OrderDetail .sectionHeading {
-  width: 100%
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3)
 }
 
 .OrderDetail .lineItemContainer {
@@ -16,6 +18,7 @@
   justify-content: flex-start;
   height: calc(100vh - 18vmin);
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .OrderDetail .total {
@@ -25,6 +28,7 @@
   padding: 1vmin 0;
   color: var(--text-light);
   border-top: .1vmin solid var(--tan-3);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .OrderDetail .total span {
@@ -33,15 +37,18 @@
   align-items: center;
   font-size: 1.5vw;
   color: var(--text-dark);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .OrderDetail .total span.right {
   display: flex;
   justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .OrderDetail .hungry {
   position: absolute;
   top: 50vh;
   font-size: 2vmin;
+  background-color: rgba(0, 0, 0, 0.5);
 }

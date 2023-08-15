@@ -1,10 +1,11 @@
+// Logo.js
 import styles from './Logo.module.scss';
 
 export default function Logo() {
-return (
-  <div className={styles.Logo}>
-    <div>SEI</div>
-    <div>CAFE</div>
-  </div>
-);
+  return (
+    <div className={styles.Logo}>
+      <img className={styles.logo} src="./gorilla.jpg" alt="logo" />
+      <h2 className={styles.title} >Welcome to Gorilla Gainz </h2>
+    </div>
+  );
 }

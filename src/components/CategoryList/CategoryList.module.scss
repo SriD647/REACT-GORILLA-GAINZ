@@ -3,6 +3,7 @@
     list-style: none;
     padding: 0;
     font-size: 1.7vw;
+    background-color: rgba(0, 0, 0, 0.5);
     }
     
     .CategoryList li {
@@ -10,6 +11,7 @@
     text-align: center;
     border-radius: .5vmin;
     margin-bottom: .5vmin;
+    background-color: rgba(0, 0, 0, 0.5);
     }
     
     .CategoryList li:hover:not(.active) {

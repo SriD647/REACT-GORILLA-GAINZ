@@ -6,10 +6,10 @@
   margin-bottom: 3vmin;
   padding: 2vmin;
   color: var(--text-light);
-  background-color: var(--white);
+  background-color: rgba(0, 0, 0, 0.3);
   border: .1vmin solid var(--tan-3);
   border-radius: 1vmin;
-  font-size: 4vmin;
+  font-size: 2vmin;
 }
 
 .MenuListItem .emoji {
@@ -24,16 +24,27 @@
 .MenuListItem .buy {
   display: flex;
   flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .MenuListItem .buy span {
   font-size: 1.7vw;
   text-align: center;
   color: var(--text-light);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .MenuListItem .name {
-  font-size: 2vw;
+  font-size: 1.5vw;
   text-align: center;
   color: var(--text-light);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.MenuListItem .manufacturer {
+  font-size: 1.0vw;
+  text-align: center;
+  color: var(--text-light);
+  background-color: rgba(0, 0, 0, 0.5);
+  white-space: pre-wrap;
 }
