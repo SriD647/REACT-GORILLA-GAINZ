@@ -160,8 +160,8 @@ code {
   }
 
   button.btn-sm:hover {
-    color: goldenrod;
-    transform: scale(0.98);
+    background-color: goldenrod;
+    transform: scale(0.95);
 }
 
   button.btn-xs {
@@ -174,8 +174,8 @@ code {
   }
 
   button.btn-xs:hover {
-    color: goldenrod;
-    transform: scale(0.98);
+    background-color: goldenrod;
+    transform: scale(0.95);
 }
 
   button:disabled, form:invalid button[type="submit"] {

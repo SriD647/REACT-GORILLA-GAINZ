@@ -18,14 +18,21 @@ lineItemSchema.virtual('extPrice').get(function() {
 const orderSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: 'User' },
   lineItems: [lineItemSchema],
-  isPaid: { type: Boolean, default: false }
+  isPaid: { type: Boolean, default: false },
+  hasCoupon: {type: Boolean, default: false},
+  couponPercentage: {type: Number, default: 0}
 }, {
   timestamps: true,
   toJSON: { virtuals: true }
 });
 
 orderSchema.virtual('orderTotal').get(function() {
-  return this.lineItems.reduce((total, item) => total + item.extPrice, 0);
+
+  let total= this.lineItems.reduce((total, item) => total + item.extPrice, 0);
+  if (this.hasCoupon) {
+    return total - (total * this.couponPercentage)
+  }
+     return total
 });
 
 orderSchema.virtual('totalQty').get(function() {

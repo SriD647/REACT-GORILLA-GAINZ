@@ -6,7 +6,8 @@ module.exports = {
   removeFromCart,
   setItemQtyInCart,
   checkout,
-  history
+  history,
+  applyCoupon
 };
 
 // A cart is the unpaid order for a user
@@ -76,4 +77,16 @@ async function history(req, res) {
     res.status(400).json({ msg: e.message });
   }
 
+}
+
+async function applyCoupon (req, res) {
+  try {
+    const cart = await Order.getCart(req.user._id)
+    cart.hasCoupon = true
+    cart.couponPercentage = req.body.couponPercentage
+    cart.save()
+    res.json(cart)
+  } catch (error) {
+    res.status(400).json({ msg: e.message });    
+  }
 }

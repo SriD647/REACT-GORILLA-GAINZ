@@ -8,6 +8,7 @@
   border-radius: 2vmin;
 }
 
+
 .OrderHistoryPage .aside {
   display: flex;
   flex-direction: column;
@@ -35,6 +36,6 @@
 }
 
 .btnsm:hover {
-  color: goldenrod;
+  background-color: goldenrod;
   transform: scale(0.98);
 }

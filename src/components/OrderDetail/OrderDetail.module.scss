@@ -63,17 +63,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: gold;
-
-  .couponButton {
-    font-size: 1.5vmin;
-    padding: 0.6vmin 0.8vmin;
-    color: greenyellow;
-    background-color: maroon;
-    border-radius: 0.3vmin;
-    border: none;
-    cursor: pointer;
-  }
+  color: goldenrod;
 
   .checkButton {
     font-size: 1.5vmin;
@@ -81,13 +71,38 @@
     margin-top: 1vmin;
     color: black;
     background-color: maroon;
-    border-radius: 0.3vmin;
+    border-radius: 1.0vmin;
     border: none;
     cursor: pointer;
 
     &:hover {
-      background-color: gold;
+      background-color: goldenrod;
       font-size: 1.55vmin; 
     }
   }
+}
+
+.OrderDetail .studentQuestion form {
+  margin-top: 0vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  margin-top: 1vmin;
+}
+
+.submit {
+  color: black;
+  background-color: maroon;
+  border-radius: 1.0vmin;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2); 
+  border: none;
+}
+
+.submit:hover {
+  background-color: goldenrod;
+  transform: scale(0.95);;
+  color: black;
 }

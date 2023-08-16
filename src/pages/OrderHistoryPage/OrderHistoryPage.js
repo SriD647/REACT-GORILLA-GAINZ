@@ -38,6 +38,7 @@ export default function OrderHistoryPage({ user, setUser }) {
         <UserLogOut user={user} setUser={setUser} />
       </aside>
       <OrderList
+        className= {styles.orderList}
         orders={orders}
         activeOrder={activeOrder}
         handleSelectOrder={handleSelectOrder}
