@@ -5,12 +5,12 @@
   padding: 3vmin;
   font-size: 2vmin;
   color: var(--text-light);
-  background-color: rgba(0, 0, 0, 0.3)
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .OrderDetail .sectionHeading {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3)
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .OrderDetail .lineItemContainer {
@@ -27,7 +27,7 @@
   grid-template-columns: 18.35vw 5.75vw 5.25vw;
   padding: 1vmin 0;
   color: var(--text-light);
-  border-top: .1vmin solid var(--tan-3);
+  border-top: 0.1vmin solid var(--tan-3);
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -56,4 +56,38 @@
   top: 50vh;
   font-size: 2vmin;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.OrderDetail .studentQuestion {
+  margin-top: 2vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: gold;
+
+  .couponButton {
+    font-size: 1.5vmin;
+    padding: 0.6vmin 0.8vmin;
+    color: greenyellow;
+    background-color: maroon;
+    border-radius: 0.3vmin;
+    border: none;
+    cursor: pointer;
+  }
+
+  .checkButton {
+    font-size: 1.5vmin;
+    padding: 0.6vmin 0.8vmin;
+    margin-top: 1vmin;
+    color: black;
+    background-color: maroon;
+    border-radius: 0.3vmin;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: gold;
+      font-size: 1.55vmin; 
+    }
+  }
 }

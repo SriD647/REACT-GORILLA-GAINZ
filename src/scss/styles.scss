@@ -131,7 +131,7 @@ code {
   button, a.button {
     margin: 1vmin;
     padding: 1vmin;
-    color: var(--white);
+    color: white;
     background-color: #968c84;
     font-size: 2vmin;
     font-weight: bold;
@@ -142,6 +142,12 @@ code {
     outline: none;
     cursor: pointer;
   }
+
+  button:hover, a.button:hover {
+    color: rgb(248, 218, 45);
+    transform: scale(0.98);
+  }
+  
 
   button.btn-sm {
     font-size: 1.5vmin;

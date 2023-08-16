@@ -279,13 +279,13 @@ function MenuListItem(_ref) {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ OrderDetail)
 /* harmony export */ });
-/* harmony import */ var _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./OrderDetail.module.scss */ "./src/components/OrderDetail/OrderDetail.module.scss");
-/* harmony import */ var _LineItem_LineItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../LineItem/LineItem */ "./src/components/LineItem/LineItem.js");
-/* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./OrderDetail.module.scss */ "./src/components/OrderDetail/OrderDetail.module.scss");
+/* harmony import */ var _LineItem_LineItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../LineItem/LineItem */ "./src/components/LineItem/LineItem.js");
 
 
 
-// Used to display the details of any order, including the cart (unpaid order)
 function OrderDetail(_ref) {
   let {
     order,
@@ -293,34 +293,56 @@ function OrderDetail(_ref) {
     handleCheckout
   } = _ref;
   if (!order) return null;
-  const lineItems = order.lineItems.map(item => /*#__PURE__*/React.createElement(_LineItem_LineItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  const lineItems = order.lineItems.map(item => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_LineItem_LineItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
     lineItem: item,
     isPaid: order.isPaid,
     handleChangeQty: handleChangeQty,
     key: item._id
   }));
-  return /*#__PURE__*/React.createElement("div", {
-    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].OrderDetail
-  }, /*#__PURE__*/React.createElement("div", {
-    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].sectionHeading
-  }, order.isPaid ? /*#__PURE__*/React.createElement("span", null, "ORDER ", /*#__PURE__*/React.createElement("span", {
+  const [isStudentQuestionVisible, setIsStudentQuestionVisible] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const showStudentQuestion = () => {
+    setIsStudentQuestionVisible(true);
+  };
+  const hideStudentQuestion = () => {
+    setIsStudentQuestionVisible(false);
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].OrderDetail
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].sectionHeading
+  }, order.isPaid ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "ORDER ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
     className: "smaller"
-  }, order.orderId)) : /*#__PURE__*/React.createElement("span", null, "NEW ORDER"), /*#__PURE__*/React.createElement("span", null, " ", new Date(order.updatedAt).toLocaleDateString())), /*#__PURE__*/React.createElement("div", {
-    className: "".concat(_OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].lineItemContainer, " flex-ctr-ctr flex-col scroll-y")
-  }, lineItems.length ? /*#__PURE__*/React.createElement(React.Fragment, null, lineItems, /*#__PURE__*/React.createElement("section", {
-    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].total
-  }, order.isPaid ? /*#__PURE__*/React.createElement("span", {
-    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].right
-  }, "TOTAL\xA0\xA0") : /*#__PURE__*/React.createElement("button", {
+  }, order.orderId)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "NEW ORDER"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, " ", new Date(order.updatedAt).toLocaleDateString())), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "".concat(_OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].lineItemContainer, " flex-ctr-ctr flex-col scroll-y")
+  }, lineItems.length ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, lineItems, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
+    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].total
+  }, order.isPaid ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].right
+  }, "TOTAL\xA0\xA0") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
     className: "btn-sm",
     onClick: handleCheckout,
     disabled: !lineItems.length
-  }, "CHECKOUT"), /*#__PURE__*/React.createElement("span", {
-    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].totalQ
-  }, order.totalQty), /*#__PURE__*/React.createElement("span", {
-    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].right
-  }, "$", order.orderTotal.toFixed(2)))) : /*#__PURE__*/React.createElement("div", {
-    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].hungry
+  }, "CHECKOUT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].totalQ
+  }, order.totalQty), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].right
+  }, "$", order.orderTotal.toFixed(2))), order.isPaid ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].studentQuestion
+  }, isStudentQuestionVisible ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].mainBox
+  }, "Are you a G.A. student?", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    type: "checkbox",
+    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].checkbox,
+    onClick: hideStudentQuestion
+  }), " Yes"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    type: "checkbox",
+    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].checkbox,
+    onClick: hideStudentQuestion
+  }), " No")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].checkButton,
+    onClick: showStudentQuestion
+  }, "Coupon option"))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].hungry
   }, "Let the gainz begin")));
 }
 
@@ -1503,7 +1525,38 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.cPR75kdAXDGVxib0PszB {
   top: 50vh;
   font-size: 2vmin;
   background-color: rgba(0, 0, 0, 0.5);
-}`, "",{"version":3,"sources":["webpack://./src/components/OrderDetail/OrderDetail.module.scss"],"names":[],"mappings":"AAAA;EACE,sBAAA;EACA,2BAAA;EACA,mBAAA;EACA,cAAA;EACA,gBAAA;EACA,wBAAA;EACA,oCAAA;AACF;;AAEA;EACE,WAAA;EACA,oCAAA;AACF;;AAEA;EACE,iBAAA;EACA,2BAAA;EACA,4BAAA;EACA,WAAA;EACA,oCAAA;AACF;;AAEA;EACE,WAAA;EACA,aAAA;EACA,4CAAA;EACA,gBAAA;EACA,wBAAA;EACA,sCAAA;EACA,oCAAA;AACF;;AAEA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,gBAAA;EACA,uBAAA;EACA,oCAAA;AACF;;AAEA;EACE,aAAA;EACA,yBAAA;EACA,oCAAA;EACA,aAAA;AACF;;AAEA;EACE,gBAAA;AACF;;AAEA;EACE,kBAAA;EACA,SAAA;EACA,gBAAA;EACA,oCAAA;AACF","sourcesContent":[".OrderDetail {\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n  padding: 3vmin;\n  font-size: 2vmin;\n  color: var(--text-light);\n  background-color: rgba(0, 0, 0, 0.3)\n}\n\n.OrderDetail .sectionHeading {\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.3)\n}\n\n.OrderDetail .lineItemContainer {\n  margin-top: 3vmin;\n  justify-content: flex-start;\n  height: calc(100vh - 18vmin);\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .total {\n  width: 100%;\n  display: grid;\n  grid-template-columns: 18.35vw 5.75vw 5.25vw;\n  padding: 1vmin 0;\n  color: var(--text-light);\n  border-top: .1vmin solid var(--tan-3);\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .total span {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 1.5vw;\n  color: var(--text-dark);\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .total span.right {\n  display: flex;\n  justify-content: flex-end;\n  background-color: rgba(0, 0, 0, 0.5);\n  color: yellow;\n}\n\n.OrderDetail .total span.totalQ {\n  color: orangered;\n}\n\n.OrderDetail .hungry {\n  position: absolute;\n  top: 50vh;\n  font-size: 2vmin;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n"],"sourceRoot":""}]);
+}
+
+.cPR75kdAXDGVxib0PszB .kbjqA4h70D4doDx6unJn {
+  margin-top: 2vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: gold;
+}
+.cPR75kdAXDGVxib0PszB .kbjqA4h70D4doDx6unJn .i7wKDC6rkmHKpLjP9pcf {
+  font-size: 1.5vmin;
+  padding: 0.6vmin 0.8vmin;
+  color: greenyellow;
+  background-color: maroon;
+  border-radius: 0.3vmin;
+  border: none;
+  cursor: pointer;
+}
+.cPR75kdAXDGVxib0PszB .kbjqA4h70D4doDx6unJn .CmouzSR8x754f2DhFBgl {
+  font-size: 1.5vmin;
+  padding: 0.6vmin 0.8vmin;
+  margin-top: 1vmin;
+  color: black;
+  background-color: maroon;
+  border-radius: 0.3vmin;
+  border: none;
+  cursor: pointer;
+}
+.cPR75kdAXDGVxib0PszB .kbjqA4h70D4doDx6unJn .CmouzSR8x754f2DhFBgl:hover {
+  background-color: gold;
+  font-size: 1.55vmin;
+}`, "",{"version":3,"sources":["webpack://./src/components/OrderDetail/OrderDetail.module.scss"],"names":[],"mappings":"AAAA;EACE,sBAAA;EACA,2BAAA;EACA,mBAAA;EACA,cAAA;EACA,gBAAA;EACA,wBAAA;EACA,oCAAA;AACF;;AAEA;EACE,WAAA;EACA,oCAAA;AACF;;AAEA;EACE,iBAAA;EACA,2BAAA;EACA,4BAAA;EACA,WAAA;EACA,oCAAA;AACF;;AAEA;EACE,WAAA;EACA,aAAA;EACA,4CAAA;EACA,gBAAA;EACA,wBAAA;EACA,sCAAA;EACA,oCAAA;AACF;;AAEA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,gBAAA;EACA,uBAAA;EACA,oCAAA;AACF;;AAEA;EACE,aAAA;EACA,yBAAA;EACA,oCAAA;EACA,aAAA;AACF;;AAEA;EACE,gBAAA;AACF;;AAEA;EACE,kBAAA;EACA,SAAA;EACA,gBAAA;EACA,oCAAA;AACF;;AAEA;EACE,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,WAAA;AACF;AACE;EACE,kBAAA;EACA,wBAAA;EACA,kBAAA;EACA,wBAAA;EACA,sBAAA;EACA,YAAA;EACA,eAAA;AACJ;AAEE;EACE,kBAAA;EACA,wBAAA;EACA,iBAAA;EACA,YAAA;EACA,wBAAA;EACA,sBAAA;EACA,YAAA;EACA,eAAA;AAAJ;AAEI;EACE,sBAAA;EACA,mBAAA;AAAN","sourcesContent":[".OrderDetail {\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n  padding: 3vmin;\n  font-size: 2vmin;\n  color: var(--text-light);\n  background-color: rgba(0, 0, 0, 0.3);\n}\n\n.OrderDetail .sectionHeading {\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.3);\n}\n\n.OrderDetail .lineItemContainer {\n  margin-top: 3vmin;\n  justify-content: flex-start;\n  height: calc(100vh - 18vmin);\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .total {\n  width: 100%;\n  display: grid;\n  grid-template-columns: 18.35vw 5.75vw 5.25vw;\n  padding: 1vmin 0;\n  color: var(--text-light);\n  border-top: 0.1vmin solid var(--tan-3);\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .total span {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 1.5vw;\n  color: var(--text-dark);\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .total span.right {\n  display: flex;\n  justify-content: flex-end;\n  background-color: rgba(0, 0, 0, 0.5);\n  color: yellow;\n}\n\n.OrderDetail .total span.totalQ {\n  color: orangered;\n}\n\n.OrderDetail .hungry {\n  position: absolute;\n  top: 50vh;\n  font-size: 2vmin;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .studentQuestion {\n  margin-top: 2vmin;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: gold;\n\n  .couponButton {\n    font-size: 1.5vmin;\n    padding: 0.6vmin 0.8vmin;\n    color: greenyellow;\n    background-color: maroon;\n    border-radius: 0.3vmin;\n    border: none;\n    cursor: pointer;\n  }\n\n  .checkButton {\n    font-size: 1.5vmin;\n    padding: 0.6vmin 0.8vmin;\n    margin-top: 1vmin;\n    color: black;\n    background-color: maroon;\n    border-radius: 0.3vmin;\n    border: none;\n    cursor: pointer;\n\n    &:hover {\n      background-color: gold;\n      font-size: 1.55vmin; \n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"OrderDetail": `cPR75kdAXDGVxib0PszB`,
@@ -1512,7 +1565,10 @@ ___CSS_LOADER_EXPORT___.locals = {
 	"total": `V5OAbv7QFHo6WglNx0m0`,
 	"right": `GtULiQQdndLNSQN4Yc97`,
 	"totalQ": `E4h9oQ6rEKB5Ij0HXCL_`,
-	"hungry": `dyrUhYTujwEUiMzpjxWX`
+	"hungry": `dyrUhYTujwEUiMzpjxWX`,
+	"studentQuestion": `kbjqA4h70D4doDx6unJn`,
+	"couponButton": `i7wKDC6rkmHKpLjP9pcf`,
+	"checkButton": `CmouzSR8x754f2DhFBgl`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2754,4 +2810,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.6032a7b15f0b963fd0db6276e9b9acba.js.map
+//# sourceMappingURL=App.3968ad28317a9efd41a1be9f6a175ef7.js.map
