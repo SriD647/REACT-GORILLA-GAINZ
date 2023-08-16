@@ -23,25 +23,12 @@ app.use(require('./config/checkToken'));
 
 /* Middleware */
 app.use(express.json());
-if (process.env.NODE_ENV !== 'development'){
   app.use(express.static('public'))
-}
 
 app.use((req, res, next) => {
     res.locals.data = {}
     next()    
 })
-
-
-/* Controller Goes Here Remove the tes*/
-app.get('/test', (req, res)=>{
-	res.status(200).json({
-		website: 'My Website',
-		info: 'Not that much'
-	})
-})
-/* Controller Ends here */
-//LISTENER
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));

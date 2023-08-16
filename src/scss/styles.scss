@@ -7,7 +7,6 @@
   --orange: #5e5d5c;
   --text-light: #c7c4c2;
   --text-dark: #615954;
-  background-color: rgba(0, 0, 0, 0.3)
 }
 
 *, *:before, *:after {
@@ -24,7 +23,7 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
   padding: 2vmin;
   height: 100vh;
-  background-image: url('gym.jpg');
+  background-image: url('/img/gym.jpg');
   background-size: cover;
   background-position: center;
 }

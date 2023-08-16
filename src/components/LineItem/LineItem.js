@@ -6,7 +6,10 @@ return (
     <img className={styles.image} src={lineItem.item.image} ></img>
     <div className="flex-ctr-ctr flex-col">
     {/* <span className="align-ctr">{lineItem.category.name}</span> */}
-      <span className="align-ctr">{lineItem.item.name}</span>
+    <div className={styles.details}>
+        <div className={styles.type}>{lineItem.item.type}</div>
+        <div className={styles.name}>{lineItem.item.name}</div>
+      </div>
     </div>
     <div className={styles.qty} style={{ justifyContent: isPaid && 'center' }}>
       {!isPaid &&

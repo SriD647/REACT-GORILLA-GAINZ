@@ -18,7 +18,7 @@ async function index(req, res) {
 
 async function show(req, res) {
   try{
-    const item = await Item.findById(req.params.id);
+    const item = await Item.findById(req.params.id).populate('category').exec();
     res.status(200).json(item);
   }catch(e){
     res.status(400).json({ msg: e.message });
