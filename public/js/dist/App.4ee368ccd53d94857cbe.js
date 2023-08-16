@@ -315,7 +315,9 @@ function OrderDetail(_ref) {
     className: "btn-sm",
     onClick: handleCheckout,
     disabled: !lineItems.length
-  }, "CHECKOUT"), /*#__PURE__*/React.createElement("span", null, order.totalQty), /*#__PURE__*/React.createElement("span", {
+  }, "CHECKOUT"), /*#__PURE__*/React.createElement("span", {
+    className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].totalQ
+  }, order.totalQty), /*#__PURE__*/React.createElement("span", {
     className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].right
   }, "$", order.orderTotal.toFixed(2)))) : /*#__PURE__*/React.createElement("div", {
     className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].hungry
@@ -780,7 +782,7 @@ function NewOrderPage(_ref) {
     setActiveCat: setActiveCat
   }), /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
     to: "/orders",
-    className: "button btn-sm"
+    className: _NewOrderPage_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].btnsm
   }, "PREVIOUS ORDERS"), /*#__PURE__*/React.createElement(_components_UserLogOut_UserLogOut__WEBPACK_IMPORTED_MODULE_6__["default"], {
     user: user,
     setUser: setUser
@@ -868,7 +870,7 @@ function OrderHistoryPage(_ref) {
     alt: "logo"
   }), /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
     to: "/orders/new",
-    className: "button btn-sm"
+    className: _OrderHistoryPage_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].btnsm
   }, "NEW ORDER"), /*#__PURE__*/React.createElement(_components_UserLogOut_UserLogOut__WEBPACK_IMPORTED_MODULE_3__["default"], {
     user: user,
     setUser: setUser
@@ -1115,11 +1117,10 @@ function logOut() {
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.l8hJyaPvo9smd6LiNqWK {
-  color: var(--text-light);
+  color: goldenrod;
   list-style: none;
   padding: 0;
   font-size: 1.7vw;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .l8hJyaPvo9smd6LiNqWK li {
@@ -1127,20 +1128,17 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.l8hJyaPvo9smd6LiNqWK {
   text-align: center;
   border-radius: 0.5vmin;
   margin-bottom: 0.5vmin;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .l8hJyaPvo9smd6LiNqWK li:hover:not(._scckhAN2KPE1u73kR14) {
   cursor: pointer;
-  background-color: var(--orange);
-  color: var(--white);
+  color: maroon;
 }
 
 .l8hJyaPvo9smd6LiNqWK li._scckhAN2KPE1u73kR14 {
-  color: var(--text-dark);
-  background-color: var(--tan-1);
+  color: maroon;
   border: 0.1vmin solid var(--tan-3);
-}`, "",{"version":3,"sources":["webpack://./src/components/CategoryList/CategoryList.module.scss"],"names":[],"mappings":"AAAA;EACI,wBAAA;EACA,gBAAA;EACA,UAAA;EACA,gBAAA;EACA,oCAAA;AACJ;;AAEI;EACA,gBAAA;EACA,kBAAA;EACA,sBAAA;EACA,sBAAA;EACA,oCAAA;AACJ;;AAEI;EACA,eAAA;EACA,+BAAA;EACA,mBAAA;AACJ;;AAEI;EACA,uBAAA;EACA,8BAAA;EACA,kCAAA;AACJ","sourcesContent":[".CategoryList {\n    color: var(--text-light);\n    list-style: none;\n    padding: 0;\n    font-size: 1.7vw;\n    background-color: rgba(0, 0, 0, 0.5);\n    }\n    \n    .CategoryList li {\n    padding: .6vmin;\n    text-align: center;\n    border-radius: .5vmin;\n    margin-bottom: .5vmin;\n    background-color: rgba(0, 0, 0, 0.5);\n    }\n    \n    .CategoryList li:hover:not(.active) {\n    cursor: pointer;\n    background-color: var(--orange);\n    color: var(--white);\n    }\n    \n    .CategoryList li.active {\n    color: var(--text-dark);\n    background-color: var(--tan-1);\n    border: .1vmin solid var(--tan-3);\n    }"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/CategoryList/CategoryList.module.scss"],"names":[],"mappings":"AAAA;EACI,gBAAA;EACA,gBAAA;EACA,UAAA;EACA,gBAAA;AACJ;;AAEI;EACA,gBAAA;EACA,kBAAA;EACA,sBAAA;EACA,sBAAA;AACJ;;AAGI;EACA,eAAA;EACA,aAAA;AAAJ;;AAGI;EACA,aAAA;EACA,kCAAA;AAAJ","sourcesContent":[".CategoryList {\n    color: goldenrod;\n    list-style: none;\n    padding: 0;\n    font-size: 1.7vw;;\n    }\n    \n    .CategoryList li {\n    padding: .6vmin;\n    text-align: center;\n    border-radius: .5vmin;\n    margin-bottom: .5vmin;\n   \n    }\n    \n    .CategoryList li:hover:not(.active) {\n    cursor: pointer;\n    color: maroon;\n    }\n    \n    .CategoryList li.active {\n    color: maroon;\n    border: .1vmin solid var(--tan-3);\n    }"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"CategoryList": `l8hJyaPvo9smd6LiNqWK`,
@@ -1407,7 +1405,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.X4tFBfG4MKknHvd01CKE {
 .X4tFBfG4MKknHvd01CKE .sJ6Bi3a_gbl0TEwG22tU {
   text-decoration: none;
   color: rgb(65, 158, 240);
-}`, "",{"version":3,"sources":["webpack://./src/components/MenuListItem/MenuListItem.module.scss"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,oBAAA;EACA,cAAA;EACA,wBAAA;EACA,oCAAA;EACA,kCAAA;EACA,oBAAA;EACA,gBAAA;AACF;AACE;EACE,kBAAA;EACA,iBAAA;AACJ;AAEE;EACE,OAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;AAAJ;AAEI;EACE,gBAAA;EACA,kBAAA;EACA,wBAAA;EACA,oCAAA;AAAN;AAGI;EACE,gBAAA;EACA,kBAAA;EACA,wBAAA;EACA,oCAAA;AADN;AAII;EACE,cAAA;EACA,kBAAA;EACA,wBAAA;EACA,oCAAA;EACA,qBAAA;EACA,qBAAA;AAFN;AAME;EACE,aAAA;EACA,sBAAA;EACA,oCAAA;EACA,uBAAA;AAJJ;AAMI;EACE,gBAAA;EACA,kBAAA;EACA,wBAAA;EACA,oCAAA;AAJN;AAQE;EACE,qBAAA;EACA,wBAAA;AANJ","sourcesContent":[".MenuListItem {\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 3vmin;\n  padding: 2vmin;\n  color: var(--text-light);\n  background-color: rgba(0, 0, 0, 0.3);\n  border: .1vmin solid var(--tan-3);\n  border-radius: 1vmin;\n  font-size: 1vmin;\n\n  .image {\n    max-height: 20vmin;\n    max-width: 20vmin;\n  }\n\n  .details {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    margin-right: 2vmin;\n\n    .type {\n      font-size: 1.5vw;\n      text-align: center;\n      color: var(--text-light);\n      background-color: rgba(0, 0, 0, 0.5);\n    }\n\n    .name {\n      font-size: 1.5vw;\n      text-align: center;\n      color: var(--text-light);\n      background-color: rgba(0, 0, 0, 0.5);\n    }\n\n    .manufacturer {\n      font-size: 1.0vw;\n      text-align: center;\n      color: var(--text-light);\n      background-color: rgba(0, 0, 0, 0.5);\n      white-space: pre-wrap;\n      text-decoration: none;\n    }\n  }\n\n  .buy {\n    display: flex;\n    flex-direction: column;\n    background-color: rgba(0, 0, 0, 0.5);\n    justify-content: center;\n\n    span {\n      font-size: 1.7vw;\n      text-align: center;\n      color: var(--text-light);\n      background-color: rgba(0, 0, 0, 0.5);\n    }\n  }\n\n  .link {\n    text-decoration: none;\n    color: rgb(65, 158, 240);\n  }\n}\n"],"sourceRoot":""}]);
+}
+
+.sJ6Bi3a_gbl0TEwG22tU:hover {
+  text-decoration: none;
+  color: rgb(59, 230, 59);
+}`, "",{"version":3,"sources":["webpack://./src/components/MenuListItem/MenuListItem.module.scss"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,oBAAA;EACA,cAAA;EACA,wBAAA;EACA,oCAAA;EACA,kCAAA;EACA,oBAAA;EACA,gBAAA;AACF;AACE;EACE,kBAAA;EACA,iBAAA;AACJ;AAEE;EACE,OAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;AAAJ;AAEI;EACE,gBAAA;EACA,kBAAA;EACA,wBAAA;EACA,oCAAA;AAAN;AAGI;EACE,gBAAA;EACA,kBAAA;EACA,wBAAA;EACA,oCAAA;AADN;AAII;EACE,cAAA;EACA,kBAAA;EACA,wBAAA;EACA,oCAAA;EACA,qBAAA;EACA,qBAAA;AAFN;AAME;EACE,aAAA;EACA,sBAAA;EACA,oCAAA;EACA,uBAAA;AAJJ;AAMI;EACE,gBAAA;EACA,kBAAA;EACA,wBAAA;EACA,oCAAA;AAJN;AAQE;EACE,qBAAA;EACA,wBAAA;AANJ;;AAUA;EACE,qBAAA;EACA,uBAAA;AAPF","sourcesContent":[".MenuListItem {\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 3vmin;\n  padding: 2vmin;\n  color: var(--text-light);\n  background-color: rgba(0, 0, 0, 0.3);\n  border: .1vmin solid var(--tan-3);\n  border-radius: 1vmin;\n  font-size: 1vmin;\n\n  .image {\n    max-height: 20vmin;\n    max-width: 20vmin;\n  }\n\n  .details {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    margin-right: 2vmin;\n\n    .type {\n      font-size: 1.5vw;\n      text-align: center;\n      color: var(--text-light);\n      background-color: rgba(0, 0, 0, 0.5);\n    }\n\n    .name {\n      font-size: 1.5vw;\n      text-align: center;\n      color: var(--text-light);\n      background-color: rgba(0, 0, 0, 0.5);\n    }\n\n    .manufacturer {\n      font-size: 1.0vw;\n      text-align: center;\n      color: var(--text-light);\n      background-color: rgba(0, 0, 0, 0.5);\n      white-space: pre-wrap;\n      text-decoration: none;\n    }\n  }\n\n  .buy {\n    display: flex;\n    flex-direction: column;\n    background-color: rgba(0, 0, 0, 0.5);\n    justify-content: center;\n\n    span {\n      font-size: 1.7vw;\n      text-align: center;\n      color: var(--text-light);\n      background-color: rgba(0, 0, 0, 0.5);\n    }\n  }\n\n  .link {\n    text-decoration: none;\n    color: rgb(65, 158, 240);\n  }\n}\n\n.link:hover {\n  text-decoration: none;\n  color: rgb(59, 230, 59);\n}\n\n\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"MenuListItem": `X4tFBfG4MKknHvd01CKE`,
@@ -1488,6 +1491,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.cPR75kdAXDGVxib0PszB {
   display: flex;
   justify-content: flex-end;
   background-color: rgba(0, 0, 0, 0.5);
+  color: yellow;
+}
+
+.cPR75kdAXDGVxib0PszB .V5OAbv7QFHo6WglNx0m0 span.E4h9oQ6rEKB5Ij0HXCL_ {
+  color: orangered;
 }
 
 .cPR75kdAXDGVxib0PszB .dyrUhYTujwEUiMzpjxWX {
@@ -1495,7 +1503,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.cPR75kdAXDGVxib0PszB {
   top: 50vh;
   font-size: 2vmin;
   background-color: rgba(0, 0, 0, 0.5);
-}`, "",{"version":3,"sources":["webpack://./src/components/OrderDetail/OrderDetail.module.scss"],"names":[],"mappings":"AAAA;EACE,sBAAA;EACA,2BAAA;EACA,mBAAA;EACA,cAAA;EACA,gBAAA;EACA,wBAAA;EACA,oCAAA;AACF;;AAEA;EACE,WAAA;EACA,oCAAA;AACF;;AAEA;EACE,iBAAA;EACA,2BAAA;EACA,4BAAA;EACA,WAAA;EACA,oCAAA;AACF;;AAEA;EACE,WAAA;EACA,aAAA;EACA,4CAAA;EACA,gBAAA;EACA,wBAAA;EACA,sCAAA;EACA,oCAAA;AACF;;AAEA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,gBAAA;EACA,uBAAA;EACA,oCAAA;AACF;;AAEA;EACE,aAAA;EACA,yBAAA;EACA,oCAAA;AACF;;AAEA;EACE,kBAAA;EACA,SAAA;EACA,gBAAA;EACA,oCAAA;AACF","sourcesContent":[".OrderDetail {\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n  padding: 3vmin;\n  font-size: 2vmin;\n  color: var(--text-light);\n  background-color: rgba(0, 0, 0, 0.3)\n}\n\n.OrderDetail .sectionHeading {\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.3)\n}\n\n.OrderDetail .lineItemContainer {\n  margin-top: 3vmin;\n  justify-content: flex-start;\n  height: calc(100vh - 18vmin);\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .total {\n  width: 100%;\n  display: grid;\n  grid-template-columns: 18.35vw 5.75vw 5.25vw;\n  padding: 1vmin 0;\n  color: var(--text-light);\n  border-top: .1vmin solid var(--tan-3);\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .total span {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 1.5vw;\n  color: var(--text-dark);\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .total span.right {\n  display: flex;\n  justify-content: flex-end;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .hungry {\n  position: absolute;\n  top: 50vh;\n  font-size: 2vmin;\n  background-color: rgba(0, 0, 0, 0.5);\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/OrderDetail/OrderDetail.module.scss"],"names":[],"mappings":"AAAA;EACE,sBAAA;EACA,2BAAA;EACA,mBAAA;EACA,cAAA;EACA,gBAAA;EACA,wBAAA;EACA,oCAAA;AACF;;AAEA;EACE,WAAA;EACA,oCAAA;AACF;;AAEA;EACE,iBAAA;EACA,2BAAA;EACA,4BAAA;EACA,WAAA;EACA,oCAAA;AACF;;AAEA;EACE,WAAA;EACA,aAAA;EACA,4CAAA;EACA,gBAAA;EACA,wBAAA;EACA,sCAAA;EACA,oCAAA;AACF;;AAEA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,gBAAA;EACA,uBAAA;EACA,oCAAA;AACF;;AAEA;EACE,aAAA;EACA,yBAAA;EACA,oCAAA;EACA,aAAA;AACF;;AAEA;EACE,gBAAA;AACF;;AAEA;EACE,kBAAA;EACA,SAAA;EACA,gBAAA;EACA,oCAAA;AACF","sourcesContent":[".OrderDetail {\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n  padding: 3vmin;\n  font-size: 2vmin;\n  color: var(--text-light);\n  background-color: rgba(0, 0, 0, 0.3)\n}\n\n.OrderDetail .sectionHeading {\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.3)\n}\n\n.OrderDetail .lineItemContainer {\n  margin-top: 3vmin;\n  justify-content: flex-start;\n  height: calc(100vh - 18vmin);\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .total {\n  width: 100%;\n  display: grid;\n  grid-template-columns: 18.35vw 5.75vw 5.25vw;\n  padding: 1vmin 0;\n  color: var(--text-light);\n  border-top: .1vmin solid var(--tan-3);\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .total span {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 1.5vw;\n  color: var(--text-dark);\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .total span.right {\n  display: flex;\n  justify-content: flex-end;\n  background-color: rgba(0, 0, 0, 0.5);\n  color: yellow;\n}\n\n.OrderDetail .total span.totalQ {\n  color: orangered;\n}\n\n.OrderDetail .hungry {\n  position: absolute;\n  top: 50vh;\n  font-size: 2vmin;\n  background-color: rgba(0, 0, 0, 0.5);\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"OrderDetail": `cPR75kdAXDGVxib0PszB`,
@@ -1503,6 +1511,7 @@ ___CSS_LOADER_EXPORT___.locals = {
 	"lineItemContainer": `vVkqXbRqxMYDCnUttflb`,
 	"total": `V5OAbv7QFHo6WglNx0m0`,
 	"right": `GtULiQQdndLNSQN4Yc97`,
+	"totalQ": `E4h9oQ6rEKB5Ij0HXCL_`,
 	"hungry": `dyrUhYTujwEUiMzpjxWX`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -1788,11 +1797,28 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.RZqTJBeYN7RXwcHgPFys {
   align-items: center;
   margin: 3vmin 2vmin;
   background-color: rgba(0, 0, 0, 0.5);
-}`, "",{"version":3,"sources":["webpack://./src/pages/NewOrderPage/NewOrderPage.module.scss"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,aAAA;EACA,sCAAA;EACA,uBAAA;EACA,oCAAA;EACA,oBAAA;AACF;;AAEA;EACE,cAAA;EACA,eAAA;EACA,YAAA;AACF;;AAEA;EACE,aAAA;EACA,sBAAA;EACA,8BAAA;EACA,mBAAA;EACA,mBAAA;EACA,oCAAA;AACF","sourcesContent":[".NewOrderPage {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1.6fr 3.5fr 3fr;\n  grid-template-rows: 1fr;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 2vmin;\n}\n\n.logo {\n  max-width: 70%;\n  max-height: 70%;\n  height: auto;\n}\n\n.NewOrderPage aside {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  margin: 3vmin 2vmin;\n  background-color: rgba(0, 0, 0, 0.5);\n}"],"sourceRoot":""}]);
+}
+
+.jAsmRvyvv126zPPJQsqA {
+  color: black;
+  background-color: maroon;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  border: none;
+  padding: 0.6vmin 0.8vmin;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.jAsmRvyvv126zPPJQsqA:hover {
+  color: goldenrod;
+  transform: scale(0.98);
+}`, "",{"version":3,"sources":["webpack://./src/pages/NewOrderPage/NewOrderPage.module.scss"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,aAAA;EACA,sCAAA;EACA,uBAAA;EACA,oCAAA;EACA,oBAAA;AACF;;AAEA;EACE,cAAA;EACA,eAAA;EACA,YAAA;AACF;;AAEA;EACE,aAAA;EACA,sBAAA;EACA,8BAAA;EACA,mBAAA;EACA,mBAAA;EACA,oCAAA;AACF;;AAEA;EACI,YAAA;EACA,wBAAA;EACA,0CAAA;EACA,YAAA;EACA,wBAAA;EACA,kBAAA;EACA,qBAAA;EACA,iBAAA;AACJ;;AAEA;EACE,gBAAA;EACA,sBAAA;AACF","sourcesContent":[".NewOrderPage {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1.6fr 3.5fr 3fr;\n  grid-template-rows: 1fr;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 2vmin;\n}\n\n.logo {\n  max-width: 70%;\n  max-height: 70%;\n  height: auto;\n}\n\n.NewOrderPage aside {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  margin: 3vmin 2vmin;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.btnsm {\n    color: black;\n    background-color: maroon;\n    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2); \n    border: none;\n    padding: .6vmin .8vmin;\n    border-radius: 8px; \n    text-decoration: none;\n    font-weight: bold;\n}\n\n.btnsm:hover {\n  color: goldenrod;\n  transform: scale(0.98);\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"NewOrderPage": `RZqTJBeYN7RXwcHgPFys`,
-	"logo": `F5MJqrls9kja6MOngCQM`
+	"logo": `F5MJqrls9kja6MOngCQM`,
+	"btnsm": `jAsmRvyvv126zPPJQsqA`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1839,12 +1865,29 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.U7F51i6q23MB43wS4GeC {
   max-width: 70%;
   max-height: 70%;
   height: auto;
-}`, "",{"version":3,"sources":["webpack://./src/pages/OrderHistoryPage/OrderHistoryPage.module.scss"],"names":[],"mappings":"AACA;EACE,YAAA;EACA,aAAA;EACA,sCAAA;EACA,uBAAA;EACA,oCAAA;EACA,oBAAA;AAAF;;AAGA;EACE,aAAA;EACA,sBAAA;EACA,8BAAA;EACA,mBAAA;EACA,mBAAA;EACA,oCAAA;AAAF;;AAGA;EACI,cAAA;EACA,eAAA;EACA,YAAA;AAAJ","sourcesContent":["///css\n.OrderHistoryPage {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1.6fr 3.5fr 3fr;\n  grid-template-rows: 1fr;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 2vmin;\n}\n\n.OrderHistoryPage .aside {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  margin: 3vmin 2vmin;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.logo {\n    max-width: 70%;\n    max-height: 70%;\n    height: auto;\n  }\n"],"sourceRoot":""}]);
+}
+
+.jc5XYzj19ljQsFv1z13A {
+  color: black;
+  background-color: maroon;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  border: none;
+  padding: 0.6vmin 0.8vmin;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.jc5XYzj19ljQsFv1z13A:hover {
+  color: goldenrod;
+  transform: scale(0.98);
+}`, "",{"version":3,"sources":["webpack://./src/pages/OrderHistoryPage/OrderHistoryPage.module.scss"],"names":[],"mappings":"AACA;EACE,YAAA;EACA,aAAA;EACA,sCAAA;EACA,uBAAA;EACA,oCAAA;EACA,oBAAA;AAAF;;AAGA;EACE,aAAA;EACA,sBAAA;EACA,8BAAA;EACA,mBAAA;EACA,mBAAA;EACA,oCAAA;AAAF;;AAGA;EACI,cAAA;EACA,eAAA;EACA,YAAA;AAAJ;;AAGE;EACE,YAAA;EACA,wBAAA;EACA,0CAAA;EACA,YAAA;EACA,wBAAA;EACA,kBAAA;EACA,qBAAA;EACA,iBAAA;AAAJ;;AAGA;EACE,gBAAA;EACA,sBAAA;AAAF","sourcesContent":["///css\n.OrderHistoryPage {\n  height: 100%;\n  display: grid;\n  grid-template-columns: 1.6fr 3.5fr 3fr;\n  grid-template-rows: 1fr;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 2vmin;\n}\n\n.OrderHistoryPage .aside {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  margin: 3vmin 2vmin;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.logo {\n    max-width: 70%;\n    max-height: 70%;\n    height: auto;\n  }\n\n  .btnsm {\n    color: black;\n    background-color: maroon;\n    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2); \n    border: none;\n    padding: .6vmin .8vmin;\n    border-radius: 8px; \n    text-decoration: none;\n    font-weight: bold;\n}\n\n.btnsm:hover {\n  color: goldenrod;\n  transform: scale(0.98);\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"OrderHistoryPage": `U7F51i6q23MB43wS4GeC`,
 	"aside": `Gl976TgPIRmY9_yeWoZA`,
-	"logo": `bdJgIqaIXsYnwqx4qGnF`
+	"logo": `bdJgIqaIXsYnwqx4qGnF`,
+	"btnsm": `jc5XYzj19ljQsFv1z13A`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2711,4 +2754,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.7cfab4a60b595764c8d46b071de5c6d2.js.map
+//# sourceMappingURL=App.25a3ab0d99be06b7a75707b348108966.js.map

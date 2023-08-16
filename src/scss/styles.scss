@@ -146,12 +146,31 @@ code {
   button.btn-sm {
     font-size: 1.5vmin;
     padding: .6vmin .8vmin;
+    color: black;
+    background-color: maroon;
+    border-radius: 8px; 
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2); 
+    border: none;
   }
 
+  button.btn-sm:hover {
+    color: goldenrod;
+    transform: scale(0.98);
+}
+
   button.btn-xs {
-    font-size: 1vmin;
+    font-size: 2vmin;
     padding: .4vmin .5vmin;
+    color: black;
+    background-color: maroon;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2); 
+    border: none;
   }
+
+  button.btn-xs:hover {
+    color: goldenrod;
+    transform: scale(0.98);
+}
 
   button:disabled, form:invalid button[type="submit"] {
     cursor: not-allowed;

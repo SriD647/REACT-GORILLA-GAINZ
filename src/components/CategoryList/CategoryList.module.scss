@@ -1,9 +1,8 @@
 .CategoryList {
-    color: var(--text-light);
+    color: goldenrod;
     list-style: none;
     padding: 0;
-    font-size: 1.7vw;
-    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1.7vw;;
     }
     
     .CategoryList li {
@@ -11,17 +10,15 @@
     text-align: center;
     border-radius: .5vmin;
     margin-bottom: .5vmin;
-    background-color: rgba(0, 0, 0, 0.5);
+   
     }
     
     .CategoryList li:hover:not(.active) {
     cursor: pointer;
-    background-color: var(--orange);
-    color: var(--white);
+    color: maroon;
     }
     
     .CategoryList li.active {
-    color: var(--text-dark);
-    background-color: var(--tan-1);
+    color: maroon;
     border: .1vmin solid var(--tan-3);
     }

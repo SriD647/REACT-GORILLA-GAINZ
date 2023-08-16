@@ -21,3 +21,19 @@
   margin: 3vmin 2vmin;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+.btnsm {
+    color: black;
+    background-color: maroon;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2); 
+    border: none;
+    padding: .6vmin .8vmin;
+    border-radius: 8px; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btnsm:hover {
+  color: goldenrod;
+  transform: scale(0.98);
+}

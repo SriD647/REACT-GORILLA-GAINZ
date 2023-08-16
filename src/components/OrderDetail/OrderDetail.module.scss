@@ -44,6 +44,11 @@
   display: flex;
   justify-content: flex-end;
   background-color: rgba(0, 0, 0, 0.5);
+  color: yellow;
+}
+
+.OrderDetail .total span.totalQ {
+  color: orangered;
 }
 
 .OrderDetail .hungry {
