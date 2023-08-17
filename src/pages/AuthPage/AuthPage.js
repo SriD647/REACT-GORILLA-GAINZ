@@ -15,8 +15,7 @@ export default function AuthPage({ setUser }) {
           <SignUpForm setUser={setUser} />
         </div>
         <h2 className={styles.discount}> ***30% discount for General Assembly students!!!</h2>
-      </div>
-      
+      </div>      
     </main>
   );
 }

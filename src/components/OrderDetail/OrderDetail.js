@@ -96,8 +96,7 @@ export default function OrderDetail({ order, updateOrder, handleChangeQty, handl
                                             <input type="checkbox" className={styles.checkbox} onClick={hideStudentQuestion} /> No
                                         </label>
                                         {isInputFormVisible && (
-                                           <div>
-                                           <form onSubmit={changeTotal}><br/>
+                                           <form className={styles.form} onSubmit={changeTotal}><br/>
                                              <input
                                                className={styles.input}
                                                type="text"
@@ -108,7 +107,6 @@ export default function OrderDetail({ order, updateOrder, handleChangeQty, handl
                                              />
                                              <button className= {styles.submit} type="submit">Submit</button>
                                            </form>
-                                         </div>
                                         )}
                                     </div>
                                 ) : (

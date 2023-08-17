@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: center;
   gap: 1rem; 
-  padding: 0;
 }
 
 .AuthPage {
@@ -19,13 +18,13 @@
 
 @keyframes floating {
   0% {
-    transform: translateX(0);
+    transform: translateX(-20px);
   }
   50% {
     transform: translateX(20px);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(-20px);
   }
 }
 
@@ -35,6 +34,6 @@
     color: rgb(227, 31, 31);
     font-size: 1.2vw;
     align-items: center;
-    margin-left: 6.0vw;
-    margin-bottom: 0.5rem;
+    margin-left: 4.5vw;
+    margin-top: -2.0rem; 
 }
