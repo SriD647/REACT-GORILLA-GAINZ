@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import styles from './OrderDetail.module.scss';
 import LineItem from '../LineItem/LineItem';
 import coupons from '../../utilities/coupons';
+import { applyCoupon } from '../../utilities/orders-api';
 
 
-export default function OrderDetail({ order, handleChangeQty, handleCheckout }) {
+export default function OrderDetail({ order, updateOrder, handleChangeQty, handleCheckout }) {
     if (!order) return null;
 
     const lineItems = order.lineItems.map(item =>
@@ -38,14 +39,21 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
       };
     
 
-    const changeTotal = (e) => {
+    const  changeTotal = async (e) => {
         e.preventDefault();
-        
-        const coupon = coupons.find((item) => {
-            return item.name.toLowerCase().trim() === text.toLowerCase().trim()
+        const coupon = coupons.find((couponCode) => {            
+            return couponCode.name.toLowerCase().trim() === text.toLowerCase().trim()
         })
+         
+        if (coupon) {
+          const discountedCart =  await applyCoupon(coupon.discount)
+            
+            updateOrder(discountedCart)
+            console.log(discountedCart)
+            console.log(order)
+        }
         // need to make an api call that will do that update, make controller in utilities, update cart
-
+        
         hideStudentQuestion();
     }
 

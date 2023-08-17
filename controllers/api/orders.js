@@ -85,6 +85,9 @@ async function applyCoupon (req, res) {
     cart.hasCoupon = true
     cart.couponPercentage = req.body.couponPercentage
     cart.save()
+      .then( c => {
+        console.log('orderTotal', c.orderTotal)
+      } )
     res.json(cart)
   } catch (error) {
     res.status(400).json({ msg: e.message });    

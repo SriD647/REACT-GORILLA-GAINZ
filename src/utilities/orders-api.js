@@ -30,3 +30,7 @@ export function checkout() {
 export function getOrderHistory() {
   return sendRequest(`${BASE_URL}/history`);
 }
+
+export function applyCoupon(couponPercentage) {
+  return sendRequest(`${BASE_URL}/cart/coupon`, 'PUT', {couponPercentage});
+}

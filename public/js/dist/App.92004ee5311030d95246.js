@@ -284,6 +284,10 @@ function MenuListItem(_ref) {
 /* harmony import */ var _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./OrderDetail.module.scss */ "./src/components/OrderDetail/OrderDetail.module.scss");
 /* harmony import */ var _LineItem_LineItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../LineItem/LineItem */ "./src/components/LineItem/LineItem.js");
 /* harmony import */ var _utilities_coupons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utilities/coupons */ "./src/utilities/coupons.js");
+/* harmony import */ var _utilities_orders_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utilities/orders-api */ "./src/utilities/orders-api.js");
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 
 
 
@@ -291,6 +295,7 @@ function MenuListItem(_ref) {
 function OrderDetail(_ref) {
   let {
     order,
+    updateOrder,
     handleChangeQty,
     handleCheckout
   } = _ref;
@@ -319,15 +324,26 @@ function OrderDetail(_ref) {
   const handleChange = e => {
     setText(e.target.value);
   };
-  const changeTotal = e => {
-    e.preventDefault();
-    const coupon = _utilities_coupons__WEBPACK_IMPORTED_MODULE_3__["default"].find(item => {
-      return item.name.toLowerCase().trim() === text.toLowerCase().trim();
-    });
-    // need to make an api call that will do that update, make controller in utilities, update cart
+  const changeTotal = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator(function* (e) {
+      e.preventDefault();
+      const coupon = _utilities_coupons__WEBPACK_IMPORTED_MODULE_3__["default"].find(couponCode => {
+        return couponCode.name.toLowerCase().trim() === text.toLowerCase().trim();
+      });
+      if (coupon) {
+        const discountedCart = yield (0,_utilities_orders_api__WEBPACK_IMPORTED_MODULE_4__.applyCoupon)(coupon.discount);
+        updateOrder(discountedCart);
+        console.log(discountedCart);
+        console.log(order);
+      }
+      // need to make an api call that will do that update, make controller in utilities, update cart
 
-    hideStudentQuestion();
-  };
+      hideStudentQuestion();
+    });
+    return function changeTotal(_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _OrderDetail_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].OrderDetail
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -847,6 +863,7 @@ function NewOrderPage(_ref) {
     handleAddToOrder: handleAddToOrder
   }), /*#__PURE__*/React.createElement(_components_OrderDetail_OrderDetail__WEBPACK_IMPORTED_MODULE_5__["default"], {
     order: cart,
+    updateOrder: setCart,
     handleChangeQty: handleChangeQty,
     handleCheckout: handleCheckout
   }));
@@ -954,6 +971,9 @@ function OrderHistoryPage(_ref) {
 const coupons = [{
   name: 'cohort321',
   discount: 0.3
+}, {
+  name: 'welcome10',
+  discount: 0.1
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (coupons);
 
@@ -989,6 +1009,7 @@ function getById(id) {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   addItemToCart: () => (/* binding */ addItemToCart),
+/* harmony export */   applyCoupon: () => (/* binding */ applyCoupon),
 /* harmony export */   checkout: () => (/* binding */ checkout),
 /* harmony export */   getCart: () => (/* binding */ getCart),
 /* harmony export */   getOrderHistory: () => (/* binding */ getOrderHistory),
@@ -1028,6 +1049,11 @@ function checkout() {
 // Return all paid orders for the logged in user
 function getOrderHistory() {
   return (0,_send_request__WEBPACK_IMPORTED_MODULE_0__["default"])("".concat(BASE_URL, "/history"));
+}
+function applyCoupon(couponPercentage) {
+  return (0,_send_request__WEBPACK_IMPORTED_MODULE_0__["default"])("".concat(BASE_URL, "/cart/coupon"), 'PUT', {
+    couponPercentage
+  });
 }
 
 /***/ }),
@@ -1565,7 +1591,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.cPR75kdAXDGVxib0PszB {
   display: flex;
   justify-content: flex-end;
   background-color: rgba(0, 0, 0, 0.5);
-  color: yellow;
+  color: rgb(94, 239, 71);
 }
 
 .cPR75kdAXDGVxib0PszB .V5OAbv7QFHo6WglNx0m0 span.E4h9oQ6rEKB5Ij0HXCL_ {
@@ -1624,7 +1650,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.cPR75kdAXDGVxib0PszB {
   background-color: goldenrod;
   transform: scale(0.95);
   color: black;
-}`, "",{"version":3,"sources":["webpack://./src/components/OrderDetail/OrderDetail.module.scss"],"names":[],"mappings":"AAAA;EACE,sBAAA;EACA,2BAAA;EACA,mBAAA;EACA,cAAA;EACA,gBAAA;EACA,wBAAA;EACA,oCAAA;AACF;;AAEA;EACE,WAAA;EACA,oCAAA;AACF;;AAEA;EACE,iBAAA;EACA,2BAAA;EACA,4BAAA;EACA,WAAA;EACA,oCAAA;AACF;;AAEA;EACE,WAAA;EACA,aAAA;EACA,4CAAA;EACA,gBAAA;EACA,wBAAA;EACA,sCAAA;EACA,oCAAA;AACF;;AAEA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,gBAAA;EACA,uBAAA;EACA,oCAAA;AACF;;AAEA;EACE,aAAA;EACA,yBAAA;EACA,oCAAA;EACA,aAAA;AACF;;AAEA;EACE,gBAAA;AACF;;AAEA;EACE,kBAAA;EACA,SAAA;EACA,gBAAA;EACA,oCAAA;AACF;;AAEA;EACE,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,gBAAA;AACF;AACE;EACE,kBAAA;EACA,wBAAA;EACA,iBAAA;EACA,YAAA;EACA,wBAAA;EACA,oBAAA;EACA,YAAA;EACA,eAAA;AACJ;AACI;EACE,2BAAA;EACA,mBAAA;AACN;;AAIA;EACE,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AADF;;AAIA;EACE,iBAAA;AADF;;AAIA;EACE,YAAA;EACA,wBAAA;EACA,oBAAA;EACA,0CAAA;EACA,YAAA;AADF;;AAIA;EACE,2BAAA;EACA,sBAAA;EACA,YAAA;AADF","sourcesContent":[".OrderDetail {\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n  padding: 3vmin;\n  font-size: 2vmin;\n  color: var(--text-light);\n  background-color: rgba(0, 0, 0, 0.3);\n}\n\n.OrderDetail .sectionHeading {\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.3);\n}\n\n.OrderDetail .lineItemContainer {\n  margin-top: 3vmin;\n  justify-content: flex-start;\n  height: calc(100vh - 18vmin);\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .total {\n  width: 100%;\n  display: grid;\n  grid-template-columns: 18.35vw 5.75vw 5.25vw;\n  padding: 1vmin 0;\n  color: var(--text-light);\n  border-top: 0.1vmin solid var(--tan-3);\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .total span {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 1.5vw;\n  color: var(--text-dark);\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .total span.right {\n  display: flex;\n  justify-content: flex-end;\n  background-color: rgba(0, 0, 0, 0.5);\n  color: yellow;\n}\n\n.OrderDetail .total span.totalQ {\n  color: orangered;\n}\n\n.OrderDetail .hungry {\n  position: absolute;\n  top: 50vh;\n  font-size: 2vmin;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .studentQuestion {\n  margin-top: 2vmin;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: goldenrod;\n\n  .checkButton {\n    font-size: 1.5vmin;\n    padding: 0.6vmin 0.8vmin;\n    margin-top: 1vmin;\n    color: black;\n    background-color: maroon;\n    border-radius: 1.0vmin;\n    border: none;\n    cursor: pointer;\n\n    &:hover {\n      background-color: goldenrod;\n      font-size: 1.55vmin; \n    }\n  }\n}\n\n.OrderDetail .studentQuestion form {\n  margin-top: 0vmin;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.input {\n  margin-top: 1vmin;\n}\n\n.submit {\n  color: black;\n  background-color: maroon;\n  border-radius: 1.0vmin;\n  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2); \n  border: none;\n}\n\n.submit:hover {\n  background-color: goldenrod;\n  transform: scale(0.95);;\n  color: black;\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/OrderDetail/OrderDetail.module.scss"],"names":[],"mappings":"AAAA;EACE,sBAAA;EACA,2BAAA;EACA,mBAAA;EACA,cAAA;EACA,gBAAA;EACA,wBAAA;EACA,oCAAA;AACF;;AAEA;EACE,WAAA;EACA,oCAAA;AACF;;AAEA;EACE,iBAAA;EACA,2BAAA;EACA,4BAAA;EACA,WAAA;EACA,oCAAA;AACF;;AAEA;EACE,WAAA;EACA,aAAA;EACA,4CAAA;EACA,gBAAA;EACA,wBAAA;EACA,sCAAA;EACA,oCAAA;AACF;;AAEA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,gBAAA;EACA,uBAAA;EACA,oCAAA;AACF;;AAEA;EACE,aAAA;EACA,yBAAA;EACA,oCAAA;EACA,uBAAA;AACF;;AAEA;EACE,gBAAA;AACF;;AAEA;EACE,kBAAA;EACA,SAAA;EACA,gBAAA;EACA,oCAAA;AACF;;AAEA;EACE,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,gBAAA;AACF;AACE;EACE,kBAAA;EACA,wBAAA;EACA,iBAAA;EACA,YAAA;EACA,wBAAA;EACA,oBAAA;EACA,YAAA;EACA,eAAA;AACJ;AACI;EACE,2BAAA;EACA,mBAAA;AACN;;AAIA;EACE,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AADF;;AAIA;EACE,iBAAA;AADF;;AAIA;EACE,YAAA;EACA,wBAAA;EACA,oBAAA;EACA,0CAAA;EACA,YAAA;AADF;;AAIA;EACE,2BAAA;EACA,sBAAA;EACA,YAAA;AADF","sourcesContent":[".OrderDetail {\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n  padding: 3vmin;\n  font-size: 2vmin;\n  color: var(--text-light);\n  background-color: rgba(0, 0, 0, 0.3);\n}\n\n.OrderDetail .sectionHeading {\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.3);\n}\n\n.OrderDetail .lineItemContainer {\n  margin-top: 3vmin;\n  justify-content: flex-start;\n  height: calc(100vh - 18vmin);\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .total {\n  width: 100%;\n  display: grid;\n  grid-template-columns: 18.35vw 5.75vw 5.25vw;\n  padding: 1vmin 0;\n  color: var(--text-light);\n  border-top: 0.1vmin solid var(--tan-3);\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .total span {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 1.5vw;\n  color: var(--text-dark);\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .total span.right {\n  display: flex;\n  justify-content: flex-end;\n  background-color: rgba(0, 0, 0, 0.5);\n  color: rgb(94, 239, 71);\n}\n\n.OrderDetail .total span.totalQ {\n  color: orangered;\n}\n\n.OrderDetail .hungry {\n  position: absolute;\n  top: 50vh;\n  font-size: 2vmin;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n\n.OrderDetail .studentQuestion {\n  margin-top: 2vmin;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: goldenrod;\n\n  .checkButton {\n    font-size: 1.5vmin;\n    padding: 0.6vmin 0.8vmin;\n    margin-top: 1vmin;\n    color: black;\n    background-color: maroon;\n    border-radius: 1.0vmin;\n    border: none;\n    cursor: pointer;\n\n    &:hover {\n      background-color: goldenrod;\n      font-size: 1.55vmin; \n    }\n  }\n}\n\n.OrderDetail .studentQuestion form {\n  margin-top: 0vmin;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.input {\n  margin-top: 1vmin;\n}\n\n.submit {\n  color: black;\n  background-color: maroon;\n  border-radius: 1.0vmin;\n  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2); \n  border: none;\n}\n\n.submit:hover {\n  background-color: goldenrod;\n  transform: scale(0.95);;\n  color: black;\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"OrderDetail": `cPR75kdAXDGVxib0PszB`,
@@ -2879,4 +2905,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.4e6258cb556ed416663aa7d412a58fae.js.map
+//# sourceMappingURL=App.1658e39e3604cd06a78df3033f48665e.js.map
