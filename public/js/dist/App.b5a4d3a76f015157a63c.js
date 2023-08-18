@@ -720,7 +720,11 @@ function AuthPage(_ref) {
   } = _ref;
   return /*#__PURE__*/React.createElement("main", {
     className: _AuthPage_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].AuthPage
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_components_Logo_Logo__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
+    className: _AuthPage_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].authContainer
+  }, /*#__PURE__*/React.createElement(_components_Logo_Logo__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    className: _AuthPage_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].logo
+  }), /*#__PURE__*/React.createElement("div", {
     className: _AuthPage_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].formsContainer
   }, /*#__PURE__*/React.createElement(_components_LoginForm_LoginForm__WEBPACK_IMPORTED_MODULE_2__["default"], {
     setUser: setUser
@@ -728,7 +732,7 @@ function AuthPage(_ref) {
     setUser: setUser
   })), /*#__PURE__*/React.createElement("h2", {
     className: _AuthPage_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].discount
-  }, " ***30% discount for General Assembly students!!!")));
+  }, " ***30% discount for G.A students! Enter coupon code: GAfamily")));
 }
 
 /***/ }),
@@ -970,7 +974,7 @@ function OrderHistoryPage(_ref) {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 const coupons = [{
-  name: 'cohort321',
+  name: 'GAfamily',
   discount: 0.3
 }, {
   name: 'welcome10',
@@ -1377,14 +1381,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.EDeinQzfS2N2rVW_Z1GP {
   align-items: center;
   font-size: 2.7vmin;
   color: silver;
-  margin-left: 250px;
+  margin-left: 21vw;
 }
 
 .flNGvSJKK4InMbr35RYA {
   height: 80vmin;
   width: 80vmin;
   margin-bottom: 5vmin;
-}`, "",{"version":3,"sources":["webpack://./src/components/Logo/Logo.module.scss"],"names":[],"mappings":"AACA;EACE,cAAA;EACA,aAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,aAAA;EACA,kBAAA;AAAF;;AAGA;EACE,cAAA;EACA,aAAA;EACA,oBAAA;AAAF","sourcesContent":["\n.Logo {\n  height: 12vmin;\n  width: 12vmin;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  font-size: 2.7vmin;\n  color: silver;\n  margin-left: 250px;\n}\n\n.logo {\n  height: 80vmin;\n  width: 80vmin;\n  margin-bottom: 5vmin;\n}\n\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Logo/Logo.module.scss"],"names":[],"mappings":"AACA;EACE,cAAA;EACA,aAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,aAAA;EACA,iBAAA;AAAF;;AAGA;EACE,cAAA;EACA,aAAA;EACA,oBAAA;AAAF","sourcesContent":["\n.Logo {\n  height: 12vmin;\n  width: 12vmin;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  font-size: 2.7vmin;\n  color: silver;\n  margin-left: 21vw;\n}\n\n.logo {\n  height: 80vmin;\n  width: 80vmin;\n  margin-bottom: 5vmin;\n}\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"Logo": `EDeinQzfS2N2rVW_Z1GP`,
@@ -1900,15 +1904,20 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.s93tLjssTJYh1KmguHSn {
   color: rgb(227, 31, 31);
   font-size: 1.2vw;
   align-items: center;
-  margin-left: 4.5vw;
+  margin-left: 5.5vw;
   margin-top: -0.2rem;
-}`, "",{"version":3,"sources":["webpack://./src/pages/AuthPage/AuthPage.module.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,SAAA;AAAF;;AAGA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EACA,oCAAA;EACA,iBAAA;EACA,UAAA;AAAF;;AAGA;EACE;IACE,4BAAA;EAAF;EAEA;IACE,2BAAA;EAAF;EAEA;IACE,4BAAA;EAAF;AACF;AAGA;EACI,6EAAA;EACA,2CAAA;EACA,uBAAA;EACA,gBAAA;EACA,mBAAA;EACA,kBAAA;EACA,mBAAA;AADJ","sourcesContent":["\n.formsContainer {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 1rem; \n}\n\n.AuthPage {\n  display: flex;\n  justify-content: center; \n  align-items: center; \n  height: 100vh;\n  background-color: rgba(0, 0, 0, 0.5);\n  margin-top: 0.5vw;\n  padding: 0;\n}\n\n@keyframes floating {\n  0% {\n    transform: translateX(-20px);\n  }\n  50% {\n    transform: translateX(20px);\n  }\n  100% {\n    transform: translateX(-20px);\n  }\n}\n\n.discount {\n    font-family: \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\", sans-serif;\n    animation: floating 2s infinite;\n    color: rgb(227, 31, 31);\n    font-size: 1.2vw;\n    align-items: center;\n    margin-left: 4.5vw;\n    margin-top: -0.2rem; \n}"],"sourceRoot":""}]);
+}
+
+.YgoAlnzP0DhQMM_2ZQDw {
+  margin-left: 5vw;
+}`, "",{"version":3,"sources":["webpack://./src/pages/AuthPage/AuthPage.module.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,SAAA;AAAF;;AAGA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EACA,oCAAA;EACA,iBAAA;EACA,UAAA;AAAF;;AAGA;EACE;IACE,4BAAA;EAAF;EAEA;IACE,2BAAA;EAAF;EAEA;IACE,4BAAA;EAAF;AACF;AAGA;EACI,6EAAA;EACA,2CAAA;EACA,uBAAA;EACA,gBAAA;EACA,mBAAA;EACA,kBAAA;EACA,mBAAA;AADJ;;AAIA;EACE,gBAAA;AADF","sourcesContent":["\n.formsContainer {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 1rem; \n}\n\n.AuthPage {\n  display: flex;\n  justify-content: center; \n  align-items: center; \n  height: 100vh;\n  background-color: rgba(0, 0, 0, 0.5);\n  margin-top: 0.5vw;\n  padding: 0;\n}\n\n@keyframes floating {\n  0% {\n    transform: translateX(-20px);\n  }\n  50% {\n    transform: translateX(20px);\n  }\n  100% {\n    transform: translateX(-20px);\n  }\n}\n\n.discount {\n    font-family: \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\", sans-serif;\n    animation: floating 2s infinite;\n    color: rgb(227, 31, 31);\n    font-size: 1.2vw;\n    align-items: center;\n    margin-left: 5.5vw;\n    margin-top: -0.2rem; \n}\n\n.authContainer{\n  margin-left: 5vw;\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"formsContainer": `s93tLjssTJYh1KmguHSn`,
 	"AuthPage": `RygkJgZmBHTETlLP3C3i`,
 	"discount": `sBbzYtpc0yY5sLMk7VAG`,
-	"floating": `oOzmoXAkA67heOz7Q2qA`
+	"floating": `oOzmoXAkA67heOz7Q2qA`,
+	"authContainer": `YgoAlnzP0DhQMM_2ZQDw`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2912,4 +2921,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.54198e46b0643e78ba457756a02ad850.js.map
+//# sourceMappingURL=App.f50ea97329be41973c94a2ba2d3f230b.js.map

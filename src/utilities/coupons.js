@@ -1,5 +1,5 @@
 const coupons = [{
-    name: 'cohort321',
+    name: 'GAfamily',
     discount: 0.3
 },
 {
