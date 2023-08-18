@@ -1,11 +1,4 @@
 
-.formsContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem; 
-}
-
 .AuthPage {
   display: flex;
   justify-content: center; 
@@ -32,12 +25,22 @@
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     animation: floating 2s infinite;
     color: rgb(227, 31, 31);
-    font-size: 1.2vw;
+    font-size: 1.0vw;
     align-items: center;
-    margin-left: 5.0vw;
+    margin-left: 4.0vw;
     margin-top: -0.2rem; 
 }
 
 .authContainer{
-  margin-left: 5vw;
+  margin-left: 3vw;
 }
+
+.formsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; 
+}
+
+
+
