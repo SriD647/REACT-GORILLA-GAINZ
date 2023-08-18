@@ -32,6 +32,7 @@ export default function OrderDetail({ order, updateOrder, handleChangeQty, handl
     const hideStudentQuestion = () => {
         setIsStudentQuestionVisible(false);
         setIsInputFormVisible(false); // Hide the input form when user clicks "No"
+
     };
 
     const handleChange = (e) => {
