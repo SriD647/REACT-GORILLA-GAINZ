@@ -730,9 +730,7 @@ function AuthPage(_ref) {
     setUser: setUser
   }), /*#__PURE__*/React.createElement(_components_SignUpForm_SignUpForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
     setUser: setUser
-  })), /*#__PURE__*/React.createElement("h2", {
-    className: _AuthPage_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].discount
-  }, " ***30% discount for G.A students! Enter coupon code: GAfamily")));
+  }))));
 }
 
 /***/ }),
@@ -1382,17 +1380,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.EDeinQzfS2N2rVW_Z1GP {
   font-size: 2.7vmin;
   color: silver;
   margin-left: 17vw;
-}
-
-.flNGvSJKK4InMbr35RYA {
-  height: 80vmin;
-  width: 80vmin;
-  margin-bottom: 5vmin;
-}`, "",{"version":3,"sources":["webpack://./src/components/Logo/Logo.module.scss"],"names":[],"mappings":"AACA;EACE,cAAA;EACA,aAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,aAAA;EACA,iBAAA;AAAF;;AAIA;EACE,cAAA;EACA,aAAA;EACA,oBAAA;AADF","sourcesContent":["\n.Logo {\n  height: 12vmin;\n  width: 12vmin;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  font-size: 2.7vmin;\n  color: silver;\n  margin-left: 17vw;\n\n}\n\n.logo {\n  height: 80vmin;\n  width: 80vmin;\n  margin-bottom: 5vmin;\n}\n\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Logo/Logo.module.scss"],"names":[],"mappings":"AACA;EACE,cAAA;EACA,aAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;EACA,aAAA;EACA,iBAAA;AAAF","sourcesContent":["\n.Logo {\n  height: 12vmin;\n  width: 12vmin;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  font-size: 2.7vmin;\n  color: silver;\n  margin-left: 17vw;\n\n}\n\n\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"Logo": `EDeinQzfS2N2rVW_Z1GP`,
-	"logo": `flNGvSJKK4InMbr35RYA`
+	"Logo": `EDeinQzfS2N2rVW_Z1GP`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1841,8 +1832,8 @@ ___CSS_LOADER_EXPORT___.locals = {
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.ncLgupkhPNit1w0VMAKq {
-  height: 100%;
-}`, "",{"version":3,"sources":["webpack://./src/pages/App/App.module.scss"],"names":[],"mappings":"AAAA;EACE,YAAA;AACF","sourcesContent":[".App {\n  height: 100%;\n}"],"sourceRoot":""}]);
+  height: 80%;
+}`, "",{"version":3,"sources":["webpack://./src/pages/App/App.module.scss"],"names":[],"mappings":"AAAA;EACE,WAAA;AACF","sourcesContent":[".App {\n  height: 80%;\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"App": `ncLgupkhPNit1w0VMAKq`
@@ -1903,6 +1894,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.RygkJgZmBHTETlLP3C3i {
 
 .YgoAlnzP0DhQMM_2ZQDw {
   margin-left: 3vw;
+  padding: 50%;
 }
 
 .s93tLjssTJYh1KmguHSn {
@@ -1910,7 +1902,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.RygkJgZmBHTETlLP3C3i {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-}`, "",{"version":3,"sources":["webpack://./src/pages/AuthPage/AuthPage.module.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EACA,oCAAA;EACA,iBAAA;EACA,UAAA;AAAF;;AAGA;EACE;IACE,4BAAA;EAAF;EAEA;IACE,2BAAA;EAAF;EAEA;IACE,4BAAA;EAAF;AACF;AAGA;EACI,6EAAA;EACA,2CAAA;EACA,uBAAA;EACA,cAAA;EACA,mBAAA;EACA,gBAAA;EACA,mBAAA;AADJ;;AAIA;EACE,gBAAA;AADF;;AAIA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,SAAA;AADF","sourcesContent":["\n.AuthPage {\n  display: flex;\n  justify-content: center; \n  align-items: center; \n  height: 100vh;\n  background-color: rgba(0, 0, 0, 0.5);\n  margin-top: 0.5vw;\n  padding: 0;\n}\n\n@keyframes floating {\n  0% {\n    transform: translateX(-20px);\n  }\n  50% {\n    transform: translateX(20px);\n  }\n  100% {\n    transform: translateX(-20px);\n  }\n}\n\n.discount {\n    font-family: \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\", sans-serif;\n    animation: floating 2s infinite;\n    color: rgb(227, 31, 31);\n    font-size: 1.0vw;\n    align-items: center;\n    margin-left: 4.0vw;\n    margin-top: -0.2rem; \n}\n\n.authContainer{\n  margin-left: 3vw;\n}\n\n.formsContainer {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 1rem; \n}\n\n\n\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/pages/AuthPage/AuthPage.module.scss"],"names":[],"mappings":"AACA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EACA,oCAAA;EACA,iBAAA;EACA,UAAA;AAAF;;AAGA;EACE;IACE,4BAAA;EAAF;EAEA;IACE,2BAAA;EAAF;EAEA;IACE,4BAAA;EAAF;AACF;AAGA;EACI,6EAAA;EACA,2CAAA;EACA,uBAAA;EACA,cAAA;EACA,mBAAA;EACA,gBAAA;EACA,mBAAA;AADJ;;AAIA;EACE,gBAAA;EACA,YAAA;AADF;;AAIA;EACE,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,SAAA;AADF","sourcesContent":["\n.AuthPage {\n  display: flex;\n  justify-content: center; \n  align-items: center; \n  height: 100vh;\n  background-color: rgba(0, 0, 0, 0.50);\n  margin-top: 0.5vw;\n  padding: 0;\n}\n\n@keyframes floating {\n  0% {\n    transform: translateX(-20px);\n  }\n  50% {\n    transform: translateX(20px);\n  }\n  100% {\n    transform: translateX(-20px);\n  }\n}\n\n.discount {\n    font-family: \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\", sans-serif;\n    animation: floating 2s infinite;\n    color: rgb(227, 31, 31);\n    font-size: 1.0vw;\n    align-items: center;\n    margin-left: 4.0vw;\n    margin-top: -0.2rem; \n}\n\n.authContainer{\n  margin-left: 3vw;\n  padding: 50%;\n}\n\n.formsContainer {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 1rem; \n}\n\n\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"AuthPage": `RygkJgZmBHTETlLP3C3i`,
@@ -2921,4 +2913,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.b95de9b5829ce8579ffe8fd4d80072dd.js.map
+//# sourceMappingURL=App.c6f1d93ba6c1e4902d5097409bc289a4.js.map
