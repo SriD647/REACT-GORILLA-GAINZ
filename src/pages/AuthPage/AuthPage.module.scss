@@ -4,9 +4,19 @@
   justify-content: center; 
   align-items: center; 
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.50);
   margin-top: 0.5vw;
-  padding: 0;
+  background-size: 30%
+}
+
+.authContainer{
+  margin-left: 3vw;
+}
+
+.formsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; 
 }
 
 @keyframes floating {
@@ -30,18 +40,3 @@
     margin-left: 4.0vw;
     margin-top: -0.2rem; 
 }
-
-.authContainer{
-  margin-left: 3vw;
-  padding: 50%;
-}
-
-.formsContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem; 
-}
-
-
-

@@ -20,13 +20,11 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgba(0, 0, 0, 0.3);
   padding: 2vmin;
   height: 100vh;
   background-image: url('/img/gym.jpg');
   background-size: cover;
   background-position: center;
-  overflow: hidden
 }
 
 code {
@@ -35,7 +33,8 @@ code {
 
 #root {
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); 
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.7);
 }
 
 

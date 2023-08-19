@@ -1,10 +1,11 @@
+
 .NewOrderPage {
   height: 100%;
   display: grid;
   grid-template-columns: 1.6fr 3.5fr 3fr;
   grid-template-rows: 1fr;
-  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 2vmin;
+  
 }
 
 .logo {
@@ -19,7 +20,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 3vmin 2vmin;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0,0,0,0.05);
 }
 
 .btnsm {
@@ -37,3 +38,5 @@
   background-color: goldenrod;
   transform: scale(0.96);
 }
+
+

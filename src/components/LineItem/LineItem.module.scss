@@ -4,7 +4,7 @@
   grid-template-columns: 3vw 15.35vw 5.75vw 5.25vw;
   padding: 1vmin 0;
   color: var(--text-light);
-  background-color: rgba(0, 0, 0, 0.5);
+
   border-top: .1vmin solid var(--tan-3);
   font-size: 1.5vw;
   }
@@ -48,21 +48,21 @@
         font-size: 1.5vw;
         text-align: center;
         color: var(--text-light);
-        background-color: rgba(0, 0, 0, 0.5);
+      
       }
   
       .name {
         font-size: 1.5vw;
         text-align: center;
         color: var(--text-light);
-        background-color: rgba(0, 0, 0, 0.5);
+
       }
   
       .manufacturer {
         font-size: 1.0vw;
         text-align: center;
         color: var(--text-light);
-        background-color: rgba(0, 0, 0, 0.5);
+
         white-space: pre-wrap;
         text-decoration: none;
       }

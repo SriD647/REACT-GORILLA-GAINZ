@@ -122,6 +122,7 @@ export default function OrderDetail({ order, updateOrder, handleChangeQty, handl
                     <div className={styles.hungry}>Let the gainz begin</div>
                 }
             </div>
+        
         </div>
     );
 }
