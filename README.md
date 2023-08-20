@@ -1,5 +1,5 @@
 ## React Starter Kit
-Starter kit implemented: Big Poppa Code was implemented. 
+Starter kit implemented: Big Poppa Code. 
 
 ## Steps
 
