@@ -21,6 +21,9 @@
   align-items: center;
   margin: 3vmin 2vmin;
   background-color: rgba(0,0,0,0.05);
+  @media (max-height: 392px) {
+    overflow-y: scroll;
+  }
 }
 
 .btnsm {
@@ -32,6 +35,16 @@
     border-radius: 8px; 
     text-decoration: none;
     font-weight: bold;
+    @media (max-width: 970px) {
+      font-size: 40%;
+    }
+
+    @media (max-width: 676px) {
+      font-size: 1vw;
+    }
+    @media (max-height: 540px) {
+      font-size: 1vw;
+    }
 }
 
 .btnsm:hover {

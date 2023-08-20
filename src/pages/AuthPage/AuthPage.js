@@ -15,7 +15,7 @@ export default function AuthPage({ setUser }) {
           <LoginForm setUser={setUser} />
           <SignUpForm setUser={setUser} />
         </div>
-        <h2 className={styles.discount}> ***30% discount for G.A students! Enter coupon code: GAfamily</h2>
+        <h1 className={styles.discount}> ***30% discount for G.A students! Enter coupon code: GAfamily</h1>
       </div>  
 
     </main>

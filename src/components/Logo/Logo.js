@@ -4,8 +4,8 @@ import styles from './Logo.module.scss';
 
 export default function Logo() {
   return (
-    <div className={styles.Logo}>
+    // <div className={styles.Logo}>
       <img className={styles.logo} src='/img/gorillaNoBackground.png' alt="logo" />
-    </div>
+    // </div>
   );
 }

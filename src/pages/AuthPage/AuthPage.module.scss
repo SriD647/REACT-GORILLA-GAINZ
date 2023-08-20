@@ -3,13 +3,19 @@
   display: flex;
   justify-content: center; 
   align-items: center; 
-  height: 100vh;
   margin-top: 0.5vw;
-  background-size: 30%
+  background-size: 0%; 
+ 
 }
 
 .authContainer{
   margin-left: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  margin-bottom: 10vw; 
+
 }
 
 .formsContainer {
@@ -17,6 +23,11 @@
   align-items: center;
   justify-content: center;
   gap: 1rem; 
+  margin-top: -20vmin;
+  @media (max-width: 588px) {
+    flex-direction: column;
+  }
+
 }
 
 @keyframes floating {
@@ -35,8 +46,9 @@
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     animation: floating 2s infinite;
     color: rgb(227, 31, 31);
-    font-size: 1.0vw;
+    font-size: 2.5vmin;
     align-items: center;
-    margin-left: 4.0vw;
+    margin-left: 0.8vw;
     margin-top: -0.2rem; 
 }
+

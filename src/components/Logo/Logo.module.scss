@@ -1,16 +1,17 @@
 
-.Logo {
-  height: 12vmin;
-  width: 12vmin;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.7vmin;
-  color: silver;
-  margin-left: 17vw;
-  
-}
 
 
+.logo {
 
+@media (max-height: 596px) {
+    width: 80%;
+  }
+
+  @media (max-height: 490px) {
+    width: 60%;
+  }
+  @media (max-width: 588px) {
+    width: 60%
+  }
+
+}  

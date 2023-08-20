@@ -3,6 +3,9 @@
     list-style: none;
     padding: 0;
     font-size: 1.7vw;
+    @media (max-height: 540px) {
+        font-size: 1vw;
+      }
     
     }
     

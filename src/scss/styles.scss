@@ -35,6 +35,14 @@ code {
   height: 100%;
   overflow: hidden;
   background-color: rgba(0,0,0,0.7);
+  @media (max-height: 600px) {
+    overflow-y: scroll;
+  }
+  @media (max-width: 589px) {
+    overflow-y: scroll;
+  }
+  
+  
 }
 
 

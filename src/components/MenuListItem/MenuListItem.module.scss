@@ -13,6 +13,9 @@
   .image {
     max-height: 20vmin;
     max-width: 20vmin;
+    @media (max-width: 667px) {
+      width: 40%;
+    }
   }
 
   .details {
@@ -63,6 +66,12 @@
     text-decoration: none;
     color: rgb(65, 158, 240);
   }
+
+  @media (max-width: 667px) {
+    width: 40%;
+    border: 10%;
+  }
+
 }
 
 .link:hover {
