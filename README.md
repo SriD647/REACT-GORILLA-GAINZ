@@ -1,5 +1,5 @@
-# Big Poppa Code React Starter Kit
-This Starter Kit is for New Web Developers that want to get started with react
+## React Starter Kit
+Starter kit implemented: Big Poppa Code was implemented. 
 
 ## Steps
 
