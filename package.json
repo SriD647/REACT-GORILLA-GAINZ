@@ -12,7 +12,7 @@
     "dev:webpack": "webpack --mode development --define-process-env-node-env dev",
     "build:webpack": "webpack --mode production --define-process-env-node-env production",
     "dev": "gulp",
-    "seed":"node config/seed.js",
+    "seed": "node config/seed.js",
     "styles": "gulp styles",
     "start": "node server.js"
   },
@@ -57,6 +57,7 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.1",
-    "mongoose": "^7.4.0"
+    "mongoose": "^7.4.0",
+    "serve-favicon": "^2.5.0"
   }
 }

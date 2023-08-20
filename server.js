@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
+const favicon = require('serve-favicon');
 const PORT = process.env.PORT || 8000;
 const mongoose = require('mongoose');
 const path = require('path');
@@ -32,6 +33,7 @@ app.use((req, res, next) => {
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
+app.use(favicon(path.join(__dirname, 'public', 'img','dumbbell.png')))
 // Protect the API routes below from anonymous users
 const ensureLoggedIn = require('./config/ensureLoggedIn');
 app.use('/api/items', ensureLoggedIn, require('./routes/api/items'));
